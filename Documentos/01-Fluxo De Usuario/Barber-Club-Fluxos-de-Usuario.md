@@ -19,7 +19,7 @@ Confirmação
 
 Observação: a tela de Agendamento possui um botão "Agendar pelo plano", disponível para quem já é assinante. Tanto o agendamento avulso quanto o agendamento via plano convergem para a mesma tela de Confirmação.
 
-![Fluxo Principal](../Assets/Imagens/Fluxo/FluxoPrincipal.png)
+![Fluxo Principal](./Fluxo/FluxoPrincipal.png)
 
 ---
 
@@ -42,7 +42,7 @@ Home
 Sobre
 ```
 
-![Fluxo Secundario](../Assets/Imagens/Fluxo/FluxoSecundario.png)
+![Fluxo Secundario](./Fluxo/FluxoSecundario.png)
 ---
 
 ## Fluxo Terciário
@@ -58,7 +58,7 @@ Escolher Plano
 
 Observação: este fluxo é isolado — não avança automaticamente para o Agendamento. O usuário retorna à Home ou acessa o Agendamento por conta própria depois de assinar.
 
-![Fluxo Terciario](../Assets/Imagens/Fluxo/FluxoTerciario.png)
+![Fluxo Terciario](./Fluxo/FluxoTerciario.png)
 
 ---
 
