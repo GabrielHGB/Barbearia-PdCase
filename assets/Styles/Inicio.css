@@ -1,80 +1,47 @@
-/* Remove os espaçamentos padrões do navegador */
 * {
-
     margin: 0;
-
     padding: 0;
-
     box-sizing: border-box;
-
 }
 
-
-/* Faz a página usar toda a altura da tela */
-html {
-
-    width: 100%;
-
-    height: 100%;
-
-}
-
-
-/* Define o visual principal da página */
-body {
-
-    width: 100%;
-
-    min-height: 100vh;
-
-    background-color: #1f1f1f;
-
-    color: #f0f0f0;
-
-    font-family: "Inter", sans-serif;
-
-}
-
-
-/* Remove o estilo padrão dos links */
-a {
-
-    color: inherit;
-
-    text-decoration: none;
-
-}
-
-
-/* Evita comportamentos estranhos nas imagens */
-img {
-
-    display: block;
-
-    max-width: 100%;
-
-}
-
-
-/* Guarda as cores e fontes principais */
 :root {
-
     --cor-fundo: #1f1f1f;
-
     --cor-dourada: #c89b5b;
-
     --cor-texto-claro: #f0f0f0;
-
     --cor-texto-secundario: #c3c3c3;
-
     --cor-texto-escuro: #171717;
-
     --cor-card: #ffffff;
 
     --fonte-titulo: "Oswald", sans-serif;
-
     --fonte-texto: "Inter", sans-serif;
 
+    --largura-conteudo: 83.33%;
+    --raio-menor: 0.625rem;
+    --raio-card: 1rem;
+    --raio-maior: 1.125rem;
+}
+
+html {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-claro);
+    font-family: var(--fonte-texto);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
 }
 
 
@@ -82,147 +49,64 @@ img {
    CABEÇALHO
 ================================================== */
 
-
-/* Organiza logo, navegação e botão */
 .cabecalho {
-
     width: 100%;
-
-    min-height: 6.557vh;
-
+    min-height: clamp(4rem, 6.5vw, 5.5rem);
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
-
-    padding-left: 8.333%;
-
-    padding-right: 8.333%;
-
+    gap: clamp(1rem, 2vw, 2rem);
+    padding-inline: 8.33%;
     background-color: var(--cor-fundo);
-
 }
 
-
-/* Controla o espaço usado pela logo */
 .logo {
-
-    width: 13.194%;
-
-    display: flex;
-
-    align-items: center;
-
+    flex: 0 1 13%;
     font-family: var(--fonte-titulo);
-
-    font-size: 1.5rem;
-
+    font-size: clamp(1.2rem, 1.7vw, 1.5rem);
     font-weight: 600;
-
-    color: var(--cor-texto-claro);
-
+    white-space: nowrap;
 }
 
-
-/* ==================================================
-   NAVEGAÇÃO
-================================================== */
-
-
-/* Organiza os links do menu */
 .navegacao-principal {
-
-    width: 52.778%;
-
+    flex: 1;
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
-    gap: 0.789%;
-
+    gap: clamp(0.25rem, 1vw, 1rem);
 }
 
-
-/* Define o espaço de cada item do menu */
 .nav-item {
-
-    width: 14.474%;
-
-    min-height: 77.778%;
-
+    min-width: clamp(4.5rem, 7vw, 7rem);
     display: flex;
-
     flex-direction: column;
-
     align-items: center;
-
     justify-content: center;
-
     gap: 0.25rem;
-
-    padding: 0.5rem;
-
+    padding: 0.5em 0.75em;
     border-radius: 0.5rem;
-
-    font-size: 0.875rem;
-
+    font-size: clamp(0.75rem, 1vw, 0.875rem);
     font-weight: 500;
-
-    color: var(--cor-texto-claro);
-
-    transition: 0.2s;
-
+    transition: color 0.2s ease;
 }
 
-
-/* Cria a linha embaixo do item */
 .nav-indicador {
-
-    width: 45.455%;
-
+    width: 45%;
     height: 0.125rem;
-
     display: block;
-
     border-radius: 1rem;
-
     background-color: transparent;
-
+    transition: background-color 0.2s ease;
 }
 
-
-/* Muda a cor quando passar o mouse */
-.nav-item:hover {
-
-    color: var(--cor-dourada);
-
-}
-
-
-/* Mostra a linha dourada no hover */
-.nav-item:hover .nav-indicador {
-
-    background-color: var(--cor-dourada);
-
-}
-
-
-/* Mostra qual página está selecionada */
+.nav-item:hover,
 .nav-item.ativo {
-
     color: var(--cor-dourada);
-
 }
 
-
-/* Linha da página selecionada */
+.nav-item:hover .nav-indicador,
 .nav-item.ativo .nav-indicador {
-
     background-color: var(--cor-dourada);
-
 }
 
 
@@ -230,50 +114,27 @@ img {
    BOTÕES
 ================================================== */
 
-
-/* Estilo padrão usado pelos botões */
 .botao {
-
-    display: flex;
-
+    display: inline-flex;
     align-items: center;
-
     justify-content: center;
-
+    padding: 0.9em 1.5em;
     background-color: var(--cor-dourada);
-
     color: var(--cor-texto-escuro);
-
-    border-radius: 0.625rem;
-
-    font-size: 0.8125rem;
-
+    border-radius: var(--raio-menor);
+    font-size: clamp(0.72rem, 0.9vw, 0.8125rem);
     font-weight: 500;
-
-    transition: 0.2s;
-
+    white-space: nowrap;
+    transition: transform 0.2s ease, filter 0.2s ease;
 }
 
-
-/* Faz o botão subir um pouco */
 .botao:hover {
-
     transform: translateY(-0.125rem);
-
     filter: brightness(1.08);
-
 }
 
-
-/* Botão que fica no cabeçalho */
 .botao-header {
-
-    width: 13.194%;
-
-    min-height: 57.5%;
-
-    padding: 0.875rem 1.25rem;
-
+    flex: 0 1 13%;
 }
 
 
@@ -281,34 +142,18 @@ img {
    CONTEÚDO
 ================================================== */
 
-
-/* Centraliza todo conteúdo da página */
 .pagina {
-
     width: 100%;
-
     display: flex;
-
     justify-content: center;
-
 }
 
-
-/* Limita o conteúdo a mesma largura do Figma */
 .conteudo {
-
-    width: 83.333%;
-
+    width: var(--largura-conteudo);
     display: flex;
-
     flex-direction: column;
-
-    gap: 2.833%;
-
-    padding-top: 3.167%;
-
-    padding-bottom: 3.167%;
-
+    gap: clamp(2rem, 3vw, 3.5rem);
+    padding-block: clamp(2rem, 3.2vw, 4rem);
 }
 
 
@@ -316,174 +161,84 @@ img {
    HERO
 ================================================== */
 
-
-/* Organiza texto e imagem lado a lado */
 .hero {
-
     width: 100%;
-
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
-
     gap: 4%;
-
 }
 
-
-/* Área de texto do destaque */
 .hero-texto {
-
-    width: 43.333%;
-
+    width: 43.33%;
     display: flex;
-
     flex-direction: column;
-
-    justify-content: center;
-
-    gap: 6.25%;
-
+    align-items: flex-start;
+    gap: clamp(1rem, 2vw, 1.75rem);
 }
 
-
-/* Título principal */
 .hero-texto h1 {
-
     width: 100%;
-
     font-family: var(--fonte-titulo);
-
-    font-size: 3.375rem;
-
+    font-size: clamp(2.5rem, 4vw, 3.375rem);
     font-weight: 600;
-
-    line-height: 1.35;
-
-    color: var(--cor-texto-claro);
-
+    line-height: 1.15;
 }
 
-
-/* Texto abaixo do título */
 .hero-texto p {
-
-    width: 96.154%;
-
-    font-size: 1.0625rem;
-
-    line-height: 1.45;
-
+    width: 96%;
+    font-size: clamp(0.9rem, 1.2vw, 1.0625rem);
+    line-height: 1.5;
     color: var(--cor-texto-secundario);
-
 }
 
-
-/* Botão do destaque */
 .botao-hero {
-
-    width: 40.385%;
-
-    padding-top: 2.7%;
-
-    padding-bottom: 2.7%;
-
+    width: min(40%, 13rem);
 }
 
-
-/* Área que guarda a imagem principal */
 .hero-imagem {
-
     width: 50%;
-
     overflow: hidden;
-
-    border-radius: 1.125rem;
-
+    border-radius: var(--raio-maior);
 }
 
-
-/* Faz a imagem preencher toda a área */
 .hero-imagem img {
-
     width: 100%;
-
     aspect-ratio: 600 / 354;
-
     object-fit: cover;
-
-    border-radius: 1.125rem;
-
 }
 
 
 /* ==================================================
-   LINHA DOURADA
+   DIVISOR E TÍTULOS
 ================================================== */
 
-
-/* Divide o hero da próxima seção */
 .linha-dourada {
-
     width: 100%;
-
-    height: 0.375rem;
-
+    height: clamp(0.2rem, 0.4vw, 0.375rem);
     background-color: var(--cor-dourada);
-
 }
 
-
-/* ==================================================
-   TÍTULOS DAS SEÇÕES
-================================================== */
-
-
-/* Organiza detalhe dourado e título */
 .titulo-secao {
-
     width: 100%;
-
     display: flex;
-
     align-items: center;
-
-    gap: 1%;
-
+    gap: clamp(0.5rem, 1vw, 0.75rem);
 }
 
-
-/* Barra dourada ao lado do título */
 .titulo-acento {
-
-    width: 0.417%;
-
-    min-width: 0.3125rem;
-
-    height: 1.75rem;
-
+    width: clamp(0.25rem, 0.4vw, 0.3125rem);
+    height: clamp(1.4rem, 2vw, 1.75rem);
     display: block;
-
+    flex-shrink: 0;
     background-color: var(--cor-dourada);
-
     border-radius: 0.125rem;
-
 }
 
-
-/* Texto dos títulos */
 .titulo-secao h2 {
-
     font-family: var(--fonte-titulo);
-
-    font-size: 1.5rem;
-
+    font-size: clamp(1.25rem, 1.8vw, 1.5rem);
     font-weight: 600;
-
-    color: var(--cor-texto-claro);
-
 }
 
 
@@ -491,148 +246,75 @@ img {
    SERVIÇOS
 ================================================== */
 
-
-/* Organiza toda a seção de serviços */
 .servicos {
-
     width: 100%;
-
     display: flex;
-
     flex-direction: column;
-
-    gap: 6.122%;
-
+    gap: clamp(1.5rem, 3vw, 2.5rem);
 }
 
-
-/* Organiza os três serviços lado a lado */
 .lista-servicos {
-
     width: 100%;
-
     display: flex;
-
     align-items: stretch;
-
     justify-content: space-between;
-
     gap: 2.5%;
-
-    padding-left: 4.167%;
-
-    padding-right: 4.167%;
-
+    padding-inline: 4.17%;
 }
 
-
-/* Card individual do serviço */
 .servico-card {
-
-    width: 24.545%;
-
+    width: 31%;
     overflow: hidden;
-
     background-color: var(--cor-card);
-
-    border-radius: 1rem;
-
+    border-radius: var(--raio-card);
 }
 
-
-/* Imagem do serviço */
 .servico-imagem {
-
     width: 100%;
-
     aspect-ratio: 270 / 126;
-
     object-fit: cover;
-
 }
 
-
-/* Linha dourada do card */
 .card-linha-dourada {
-
     width: 100%;
-
-    height: 0.3125rem;
-
+    height: clamp(0.2rem, 0.35vw, 0.3125rem);
     background-color: var(--cor-dourada);
-
 }
 
-
-/* Área que guarda os textos */
 .servico-informacoes {
-
     width: 100%;
-
     display: flex;
-
     flex-direction: column;
-
-    gap: 5%;
-
-    padding: 4.444% 5.185%;
-
+    gap: clamp(0.5rem, 1vw, 0.75rem);
+    padding: 4.5% 5%;
 }
 
-
-/* Organiza nome e preço */
 .servico-topo {
-
     width: 100%;
-
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
-
-    gap: 3.306%;
-
+    gap: 4%;
 }
 
-
-/* Nome do serviço */
 .servico-topo h3 {
-
     font-family: var(--fonte-titulo);
-
-    font-size: 1.0625rem;
-
+    font-size: clamp(0.95rem, 1.2vw, 1.0625rem);
     font-weight: 600;
-
     color: var(--cor-texto-escuro);
-
 }
 
-
-/* Preço do serviço */
 .preco {
-
-    font-size: 0.9375rem;
-
+    font-size: clamp(0.8rem, 1vw, 0.9375rem);
     font-weight: 500;
-
     color: var(--cor-dourada);
-
     white-space: nowrap;
-
 }
 
-
-/* Descrição do serviço */
 .servico-informacoes p {
-
-    font-size: 0.75rem;
-
-    line-height: 1.35;
-
+    font-size: clamp(0.7rem, 0.85vw, 0.75rem);
+    line-height: 1.45;
     color: var(--cor-texto-escuro);
-
 }
 
 
@@ -640,20 +322,12 @@ img {
    DESTAQUES FINAIS
 ================================================== */
 
-
-/* Organiza profissionais e planos */
 .destaques-finais {
-
     width: 100%;
-
     display: flex;
-
     justify-content: space-between;
-
-    align-items: flex-start;
-
-    gap: 2.667%;
-
+    align-items: stretch;
+    gap: 2.67%;
 }
 
 
@@ -661,100 +335,50 @@ img {
    PROFISSIONAIS
 ================================================== */
 
-
-/* Área inteira dos profissionais */
 .profissionais-destaque {
-
     width: 67.5%;
-
     display: flex;
-
     flex-direction: column;
-
-    gap: 5.333%;
-
+    gap: clamp(1.5rem, 2.5vw, 2rem);
 }
 
-
-/* Organiza os três profissionais */
 .lista-profissionais {
-
     width: 100%;
-
     display: flex;
-
     justify-content: space-between;
-
-    gap: 2.222%;
-
+    gap: 2.2%;
 }
 
-
-/* Card individual do profissional */
 .profissional-card {
-
-    width: 30.864%;
-
+    width: 31%;
     display: flex;
-
     flex-direction: column;
-
     align-items: center;
-
-    gap: 4.211%;
-
-    padding: 7.2%;
-
+    gap: clamp(0.5rem, 1vw, 0.75rem);
     background-color: var(--cor-card);
-
-    border-radius: 1rem;
-
+    border-radius: var(--raio-card);
 }
 
-
-/* Foto redonda do profissional */
 .profissional-foto {
-
-    width: 33.645%;
-
-    aspect-ratio: 1 / 1;
-
+    width: 100%;    
+    height: 50%;
+    top:0;
     object-fit: cover;
-
-    border: 1px solid var(--cor-dourada);
-
-    border-radius: 50%;
-
 }
 
-
-/* Nome do profissional */
 .profissional-card h3 {
-
     font-family: var(--fonte-titulo);
-
-    font-size: 1.1875rem;
-
+    font-size: clamp(1rem, 1.3vw, 1.1875rem);
     font-weight: 600;
-
     color: var(--cor-texto-escuro);
-
 }
 
-
-/* Especialidade do profissional */
 .profissional-card p {
-
     width: 100%;
-
-    font-size: 0.6875rem;
-
-    line-height: 1.4;
-
+    font-size: clamp(0.65rem, 0.8vw, 0.6875rem);
+    line-height: 1.45;
     text-align: center;
-
     color: var(--cor-texto-escuro);
-
 }
 
 
@@ -762,272 +386,31 @@ img {
    PLANOS
 ================================================== */
 
-
-/* Card usado para chamar atenção para os planos */
 .chamada-planos {
-
-    width: 29.167%;
-
+    width: 29.17%;
     display: flex;
-
     flex-direction: column;
-
-    gap: 7.22%;
-
-    padding: 8%;
-
-    border: 1px solid var(--cor-dourada);
-
-    border-radius: 1.125rem;
-
+    align-items: flex-start;
+    justify-content: center;
+    gap: clamp(1rem, 2vw, 1.5rem);
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    border: 0.0625rem solid var(--cor-dourada);
+    border-radius: var(--raio-maior);
 }
 
-
-/* Título dos planos */
 .chamada-planos h2 {
-
     font-family: var(--fonte-titulo);
-
-    font-size: 1.75rem;
-
+    font-size: clamp(1.35rem, 2vw, 1.75rem);
     font-weight: 600;
-
-    line-height: 1.35;
-
-    color: var(--cor-texto-claro);
-
+    line-height: 1.3;
 }
 
-
-/* Descrição dos planos */
 .chamada-planos p {
-
-    font-size: 0.8125rem;
-
-    line-height: 1.4;
-
+    font-size: clamp(0.72rem, 0.95vw, 0.8125rem);
+    line-height: 1.5;
     color: var(--cor-texto-secundario);
-
 }
 
-
-/* Botão dos planos */
 .botao-planos {
-
-    width: 57.823%;
-
-    padding-top: 4.762%;
-
-    padding-bottom: 4.762%;
-
-}
-
-
-/* ==================================================
-   TABLET
-================================================== */
-
-
-/* Ajusta o layout quando a tela diminuir */
-@media (max-width: 1000px) {
-
-    .cabecalho {
-
-        padding-left: 4%;
-
-        padding-right: 4%;
-
-        flex-wrap: wrap;
-
-        gap: 1rem;
-
-    }
-
-
-    .logo {
-
-        width: auto;
-
-    }
-
-
-    .botao-header {
-
-        width: auto;
-
-    }
-
-
-    .navegacao-principal {
-
-        width: 100%;
-
-        order: 3;
-
-    }
-
-
-    .conteudo {
-
-        width: 92%;
-
-    }
-
-
-    .hero {
-
-        flex-direction: column;
-
-        gap: 2rem;
-
-    }
-
-
-    .hero-texto {
-
-        width: 100%;
-
-    }
-
-
-    .hero-imagem {
-
-        width: 100%;
-
-    }
-
-
-    .lista-servicos {
-
-        flex-wrap: wrap;
-
-        justify-content: center;
-
-        padding-left: 0;
-
-        padding-right: 0;
-
-    }
-
-
-    .servico-card {
-
-        width: 45%;
-
-    }
-
-
-    .destaques-finais {
-
-        flex-direction: column;
-
-    }
-
-
-    .profissionais-destaque {
-
-        width: 100%;
-
-    }
-
-
-    .chamada-planos {
-
-        width: 100%;
-
-    }
-
-}
-
-
-/* ==================================================
-   CELULAR
-================================================== */
-
-
-/* Ajusta o layout para telas pequenas */
-@media (max-width: 650px) {
-
-    .cabecalho {
-
-        padding: 4% 5%;
-
-    }
-
-
-    .navegacao-principal {
-
-        flex-wrap: wrap;
-
-    }
-
-
-    .nav-item {
-
-        width: 23%;
-
-    }
-
-
-    .conteudo {
-
-        width: 90%;
-
-    }
-
-
-    .hero-texto h1 {
-
-        font-size: 2.5rem;
-
-    }
-
-
-    .botao-hero {
-
-        width: 55%;
-
-    }
-
-
-    .servico-card {
-
-        width: 100%;
-
-    }
-
-
-    .lista-profissionais {
-
-        flex-direction: column;
-
-        align-items: center;
-
-        gap: 1.5rem;
-
-    }
-
-
-    .profissional-card {
-
-        width: 100%;
-
-        padding: 7%;
-
-    }
-
-
-    .profissional-foto {
-
-        width: 25%;
-
-    }
-
-
-    .botao-planos {
-
-        width: 55%;
-
-    }
-
+    width: min(58%, 10rem);
 }
