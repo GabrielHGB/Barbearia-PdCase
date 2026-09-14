@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Serviços | PD Barber</title>
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Oswald:wght@600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../Styles/Servicos.css">
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header class="cabecalho">
+        <a href="index.html" class="logo">PD BARBER</a>
+
+        <!-- Navegação principal -->
+        <nav class="navegacao-principal">
+            <a href="../../index.html" class="nav-item">
+                <span>Início</span>
+                <span class="nav-indicador"></span>
+            </a>
+
+            <a href="#" class="nav-item ativo">
+                <span>Serviços</span>
+                <span class="nav-indicador"></span>
+            </a>
+
+            <a href="sobre.html" class="nav-item">
+                <span>Sobre</span>
+                <span class="nav-indicador"></span>
+            </a>
+
+            <a href="planos.html" class="nav-item">
+                <span>Planos</span>
+                <span class="nav-indicador"></span>
+            </a>
+        </nav>
+
+        <a href="#" class="botao botao-header">AGENDAR HORÁRIO</a>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main class="pagina">
+        <div class="conteudo">
+
+            <!-- Título -->
+            <div class="titulo-secao">
+                <span class="titulo-acento"></span>
+                <h1>SERVIÇOS</h1>
+            </div>
+
+            <!-- Introdução e busca -->
+            <section class="introducao-servicos">
+                <div class="introducao-texto">
+                    <h2>Encontre o serviço ideal</h2>
+                    <p>Cortes, barba e cuidados completos.</p>
+                </div>
+
+                <div class="campo-busca">
+                    <input type="search" placeholder="Buscar serviços..." aria-label="Buscar serviços">
+                </div>
+            </section>
+
+            <!-- Catálogo de serviços -->
+            <section class="catalogo-servicos">
+
+                <!-- Controles dos filtros -->
+                <input type="radio" name="filtro-servicos" id="filtro-todos" class="filtro-radio" checked>
+                <input type="radio" name="filtro-servicos" id="filtro-corte" class="filtro-radio">
+                <input type="radio" name="filtro-servicos" id="filtro-barba" class="filtro-radio">
+
+                <!-- Filtros -->
+                <div class="filtros">
+                    <label for="filtro-todos" class="filtro">TODOS</label>
+                    <label for="filtro-corte" class="filtro">CORTE</label>
+                    <label for="filtro-barba" class="filtro">BARBA</label>
+                </div>
+
+                <!-- Lista de serviços -->
+                <div class="lista-servicos">
+
+                    <article class="servico-card corte">
+                        <img class="servico-imagem" src="../img/CorteClassico.png" alt="Corte clássico masculino">
+
+                        <div class="card-linha-dourada"></div>
+
+                        <div class="servico-informacoes">
+                            <div class="servico-topo">
+                                <h3>Corte Clássico</h3>
+                                <span class="preco">R$ 45</span>
+                            </div>
+
+                            <p>Corte personalizado e acabamento.</p>
+                        </div>
+                    </article>
+
+                    <article class="servico-card barba">
+                        <img class="servico-imagem" src="../img/BarbaPremium.png" alt="Serviço de barba premium">
+
+                        <div class="card-linha-dourada"></div>
+
+                        <div class="servico-informacoes">
+                            <div class="servico-topo">
+                                <h3>Barba Premium</h3>
+                                <span class="preco">R$ 35</span>
+                            </div>
+
+                            <p>Modelagem, toalha quente e acabamento.</p>
+                        </div>
+                    </article>
+
+                    <article class="servico-card corte barba">
+                        <img class="servico-imagem" src="../img/ComboCompleto.png" alt="Combo completo de cabelo e barba">
+
+                        <div class="card-linha-dourada"></div>
+
+                        <div class="servico-informacoes">
+                            <div class="servico-topo">
+                                <h3>Combo Completo</h3>
+                                <span class="preco">R$ 70</span>
+                            </div>
+
+                            <p>Cabelo + barba em uma experiência completa.</p>
+                        </div>
+                    </article>
+
+                    <article class="servico-card corte">
+                        <img class="servico-imagem" src="../img/" alt="Serviço de acabamento">
+
+                        <div class="card-linha-dourada"></div>
+
+                        <div class="servico-informacoes">
+                            <div class="servico-topo">
+                                <h3>Acabamento</h3>
+                                <span class="preco">R$ 25</span>
+                            </div>
+
+                            <p>Pezinho, contorno e finalização.</p>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+</body>
+
+</html>
