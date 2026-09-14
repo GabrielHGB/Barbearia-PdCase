@@ -267,6 +267,12 @@ img {
     overflow: hidden;
     background-color: var(--cor-card);
     border-radius: var(--raio-card);
+    transition: 0.5s ease;
+}
+
+.servico-card:hover {
+    background-color: var(--cor-dourada);
+    cursor: pointer;
 }
 
 .servico-imagem {
@@ -351,36 +357,47 @@ img {
 
 .profissional-card {
     width: 31%;
+    min-height: clamp(17rem, 22vw, 21rem);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: clamp(0.5rem, 1vw, 0.75rem);
+    justify-content: center;
+    gap: clamp(0.8rem, 1.5vw, 1.2rem);
+    padding: clamp(1.2rem, 2vw, 2rem);
     background-color: var(--cor-card);
     border-radius: var(--raio-card);
+    transition: 0.5s ease;
+}
+
+.profissional-card:hover {
+    background-color: var(--cor-dourada);
+    cursor: pointer;
 }
 
 .profissional-foto {
-    width: 100%;    
-    height: 50%;
-    top:0;
+    width: 100%;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
+    object-position: center 20%;
+    border: 0.15rem solid var(--cor-dourada);
+    border-radius: 50%;
 }
 
 .profissional-card h3 {
     font-family: var(--fonte-titulo);
-    font-size: clamp(1rem, 1.3vw, 1.1875rem);
+    font-size: clamp(1.1rem, 1.5vw, 1.35rem);
     font-weight: 600;
     color: var(--cor-texto-escuro);
 }
 
 .profissional-card p {
     width: 100%;
-    font-size: clamp(0.65rem, 0.8vw, 0.6875rem);
-    line-height: 1.45;
+    max-width: 14rem;
+    font-size: clamp(0.7rem, 0.8vw, 0.8rem);
+    line-height: 1.5;
     text-align: center;
     color: var(--cor-texto-escuro);
 }
-
 
 /* ==================================================
    PLANOS
