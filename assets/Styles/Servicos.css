@@ -286,7 +286,7 @@ input {
     cursor: pointer;
     font-size: clamp(0.68rem, 0.85vw, 0.75rem);
     font-weight: 500;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition: 0.5s ease;
 }
 
 .filtro:hover {
@@ -320,6 +320,12 @@ input {
     flex-direction: column;
     background-color: var(--cor-card);
     border-radius: var(--raio-card);
+    transition: 0.2s ease;
+}
+
+.servico-card:hover {
+    background-color: var(--cor-dourada);
+    cursor: pointer;
 }
 
 .servico-imagem {
