@@ -139,17 +139,26 @@ img {
 
 .botao-voltar {
     width: fit-content;
-    min-width: clamp(10rem, 15.3vw, 13.75rem);
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: clamp(0.7rem, 0.9vw, 0.8rem) 1.2rem;
+
+    padding: 0.8rem 1.5rem;
+
     background-color: var(--cor-dourada);
-    border: 0.0625rem solid var(--cor-dourada);
+    color: var(--cor-texto-escuro);
+
     border-radius: var(--raio-menor);
-    font-size: clamp(0.68rem, 0.85vw, 0.75rem);
+
+    font-size: 0.75rem;
     font-weight: 500;
+
     transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.botao-voltar:hover {
+    transform: translateY(-0.125rem);
+    filter: brightness(1.08);
 }
 
 .botao-profissional {
@@ -180,6 +189,18 @@ img {
 /* ==================================================
    DETALHES DO SERVIÇO
 ================================================== */
+
+.detalhe-servico {
+    width: 100%;
+    display: none;
+    align-items: stretch;
+    gap: 4%;
+}
+
+.detalhe-servico:target {
+    display: flex;
+    flex-direction: column;
+}
 
 .detalhes-servico {
     width: 100%;
