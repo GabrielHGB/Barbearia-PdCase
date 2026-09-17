@@ -22,7 +22,8 @@
     <header class="cabecalho">
         <a href="../../index.html" class="logo">PD BARBER</a>
 
-        <nav class="navegacao-principal">
+        <!-- Navegação desktop -->
+        <nav class="navegacao-principal" aria-label="Navegação principal">
             <a href="../../index.html" class="nav-item">
                 <span>Início</span>
                 <span class="nav-indicador"></span>
@@ -45,228 +46,353 @@
         </nav>
 
         <a href="Profissionais.html" class="botao botao-header">AGENDAR HORÁRIO</a>
+
+        <!-- Cabeçalho mobile -->
+        <a href="Profissionais.html" class="cabecalho-mobile-voltar mobile-voltar-agendamento" aria-label="Voltar para profissionais">&lt;</a>
+        <label for="etapa-confirmacao" class="cabecalho-mobile-voltar mobile-voltar-confirmacao" aria-label="Voltar para o agendamento">&lt;</label>
+
+        <span class="cabecalho-mobile-titulo titulo-mobile-agendamento">AGENDAMENTO</span>
+        <span class="cabecalho-mobile-titulo titulo-mobile-confirmacao">CONFIRMAR</span>
+        <span class="cabecalho-mobile-titulo titulo-mobile-sucesso">CONFIRMADO</span>
     </header>
 
-    <!-- Formulário -->
-    <form class="fluxo-agendamento">
+    <!-- Conteúdo -->
+    <main class="fluxo-paginas">
 
-        <!-- Profissionais recebidos pela URL -->
-        <span id="gabriel" class="profissional-target"></span>
-        <span id="lucas" class="profissional-target"></span>
-        <span id="andre" class="profissional-target"></span>
-        <span id="bruna" class="profissional-target"></span>
-        <span id="aline" class="profissional-target"></span>
-        <span id="flavia" class="profissional-target"></span>
+        <!-- Formulário -->
+        <form class="fluxo-agendamento">
 
-        <!-- Controle das telas -->
-        <input type="checkbox" id="etapa-confirmacao" class="controle-tela">
-        <input type="checkbox" id="agendamento-concluido" class="controle-tela">
+            <!-- Profissionais pela URL -->
+            <span id="gabriel" class="profissional-target"></span>
+            <span id="lucas" class="profissional-target"></span>
+            <span id="andre" class="profissional-target"></span>
+            <span id="bruna" class="profissional-target"></span>
+            <span id="aline" class="profissional-target"></span>
+            <span id="flavia" class="profissional-target"></span>
 
-        <!-- Agendamento -->
-        <main class="pagina tela-agendamento">
-            <div class="conteudo">
+            <!-- Controle das telas -->
+            <input type="checkbox" id="etapa-confirmacao" class="controle-tela">
+            <input type="checkbox" id="agendamento-concluido" class="controle-tela">
 
-                <!-- Título -->
-                <div class="titulo-secao">
-                    <span class="titulo-acento"></span>
-                    <h1>AGENDAMENTO</h1>
+            <!-- Agendamento -->
+            <section class="pagina tela-agendamento" aria-labelledby="titulo-agendamento">
+                <div class="conteudo">
+
+                    <!-- Título -->
+                    <header class="cabecalho-agendamento">
+                        <div class="titulo-secao">
+                            <span class="titulo-acento"></span>
+                            <h1 id="titulo-agendamento">AGENDAMENTO</h1>
+                        </div>
+
+                        <div class="introducao-agendamento">
+                            <h2>Escolha serviço, data e horário</h2>
+                            <p>Selecione o serviço desejado e finalize os detalhes do seu atendimento.</p>
+                        </div>
+                    </header>
+
+                    <!-- Área do agendamento -->
+                    <div class="agendamento-colunas">
+
+                        <!-- Opções -->
+                        <div class="data-horario">
+
+                            <!-- Serviço -->
+                            <fieldset class="grupo-agendamento">
+                                <legend class="sr-only">Escolha o serviço</legend>
+
+                                <div class="titulo-secao titulo-secao-menor">
+                                    <span class="titulo-acento"></span>
+                                    <h2>SERVIÇO</h2>
+                                </div>
+
+                                <div class="lista-servicos-agendamento">
+                                    <input type="radio" name="servico" id="servico-corte-classico" value="Corte Clássico" class="opcao-input">
+                                    <label for="servico-corte-classico" class="opcao-servico">CORTE CLÁSSICO</label>
+
+                                    <input type="radio" name="servico" id="servico-barba-premium" value="Barba Premium" class="opcao-input">
+                                    <label for="servico-barba-premium" class="opcao-servico">BARBA PREMIUM</label>
+
+                                    <input type="radio" name="servico" id="servico-combo-completo" value="Combo Completo" class="opcao-input">
+                                    <label for="servico-combo-completo" class="opcao-servico">COMBO COMPLETO</label>
+
+                                    <input type="radio" name="servico" id="servico-acabamento" value="Acabamento" class="opcao-input">
+                                    <label for="servico-acabamento" class="opcao-servico">ACABAMENTO</label>
+                                </div>
+                            </fieldset>
+
+                            <!-- Dia -->
+                            <fieldset class="grupo-agendamento">
+                                <legend class="sr-only">Escolha o dia</legend>
+
+                                <div class="titulo-secao titulo-secao-menor">
+                                    <span class="titulo-acento"></span>
+                                    <h2>DIA DO AGENDAMENTO</h2>
+                                </div>
+
+                                <div class="lista-dias">
+                                    <input type="radio" name="dia" id="dia-seg-12" value="12" class="opcao-input">
+                                    <label for="dia-seg-12" class="opcao-dia">SEG 12</label>
+
+                                    <input type="radio" name="dia" id="dia-ter-13" value="13" class="opcao-input" checked>
+                                    <label for="dia-ter-13" class="opcao-dia">TER 13</label>
+
+                                    <input type="radio" name="dia" id="dia-qua-14" value="14" class="opcao-input">
+                                    <label for="dia-qua-14" class="opcao-dia">QUA 14</label>
+
+                                    <input type="radio" name="dia" id="dia-qui-15" value="15" class="opcao-input">
+                                    <label for="dia-qui-15" class="opcao-dia">QUI 15</label>
+
+                                    <input type="radio" name="dia" id="dia-sex-16" value="16" class="opcao-input">
+                                    <label for="dia-sex-16" class="opcao-dia">SEX 16</label>
+
+                                    <input type="radio" name="dia" id="dia-sab-17" value="17" class="opcao-input">
+                                    <label for="dia-sab-17" class="opcao-dia">SÁB 17</label>
+                                </div>
+                            </fieldset>
+
+                            <!-- Horário -->
+                            <fieldset class="grupo-agendamento">
+                                <legend class="sr-only">Escolha o horário</legend>
+
+                                <div class="titulo-secao titulo-secao-menor">
+                                    <span class="titulo-acento"></span>
+                                    <h2>HORÁRIO</h2>
+                                </div>
+
+                                <div class="lista-horarios">
+                                    <input type="radio" name="horario" id="hora-0900" value="09:00" class="opcao-input">
+                                    <label for="hora-0900" class="opcao-horario">09:00</label>
+
+                                    <input type="radio" name="horario" id="hora-1030" value="10:30" class="opcao-input">
+                                    <label for="hora-1030" class="opcao-horario">10:30</label>
+
+                                    <input type="radio" name="horario" id="hora-1300" value="13:00" class="opcao-input">
+                                    <label for="hora-1300" class="opcao-horario">13:00</label>
+
+                                    <input type="radio" name="horario" id="hora-1430" value="14:30" class="opcao-input" checked>
+                                    <label for="hora-1430" class="opcao-horario">14:30</label>
+
+                                    <input type="radio" name="horario" id="hora-1700" value="17:00" class="opcao-input">
+                                    <label for="hora-1700" class="opcao-horario">17:00</label>
+
+                                    <input type="radio" name="horario" id="hora-1830" value="18:30" class="opcao-input">
+                                    <label for="hora-1830" class="opcao-horario">18:30</label>
+                                </div>
+                            </fieldset>
+                        </div>
+
+                        <!-- Comentários -->
+                        <aside class="comentarios-confirmacao">
+                            <div class="titulo-secao titulo-secao-menor">
+                                <span class="titulo-acento"></span>
+                                <h2>COMENTÁRIOS</h2>
+                            </div>
+
+                            <label for="comentarios" class="sr-only">Comentários sobre o atendimento</label>
+                            <textarea id="comentarios" name="comentarios" class="campo-comentarios" placeholder="Ex.: gostaria de um corte mais baixo nas laterais..."></textarea>
+
+                            <label for="etapa-confirmacao" class="botao botao-agendar">AGENDAR</label>
+                        </aside>
+                    </div>
                 </div>
+            </section>
 
-                <!-- Introdução -->
-                <div class="introducao-agendamento">
-                    <h2>Escolha serviço, data e horário</h2>
-                    <p>Selecione o serviço desejado e finalize os detalhes do seu atendimento.</p>
-                </div>
+            <!-- Verificação -->
+            <section class="pagina tela-confirmacao" aria-labelledby="titulo-confirmacao">
+                <div class="conteudo conteudo-confirmacao">
 
-                <!-- Área do agendamento -->
-                <div class="agendamento-colunas">
+                    <!-- Título -->
+                    <header class="cabecalho-confirmacao">
+                        <div class="titulo-secao">
+                            <span class="titulo-acento"></span>
+                            <h1 id="titulo-confirmacao">CONFIRA SEU HORÁRIO</h1>
+                        </div>
 
-                    <!-- Serviço, data e horário -->
-                    <div class="data-horario">
+                        <p>Revise as informações antes de confirmar.</p>
+                    </header>
+
+                    <!-- Resumo -->
+                    <div class="resumo-agendamento">
+
+                        <!-- Profissional -->
+                        <section class="verificacao-grupo">
+                            <div class="titulo-secao titulo-secao-menor">
+                                <span class="titulo-acento"></span>
+                                <h2>PROFISSIONAL</h2>
+                            </div>
+
+                            <div class="verificacao-caixa resumo-profissional">
+                                <span class="valor-profissional profissional-nao-informado">
+                                    <span class="valor-principal">NÃO INFORMADO</span>
+                                </span>
+
+                                <span class="valor-profissional profissional-gabriel">
+                                    <span class="valor-principal">GABRIEL</span>
+                                </span>
+
+                                <span class="valor-profissional profissional-lucas">
+                                    <span class="valor-principal">LUCAS</span>
+                                </span>
+
+                                <span class="valor-profissional profissional-andre">
+                                    <span class="valor-principal">ANDRÉ</span>
+                                </span>
+
+                                <span class="valor-profissional profissional-bruna">
+                                    <span class="valor-principal">BRUNA</span>
+                                </span>
+
+                                <span class="valor-profissional profissional-aline">
+                                    <span class="valor-principal">ALINE</span>
+                                </span>
+
+                                <span class="valor-profissional profissional-flavia">
+                                    <span class="valor-principal">FLÁVIA</span>
+                                </span>
+                            </div>
+                        </section>
 
                         <!-- Serviço -->
-                        <div class="titulo-secao titulo-secao-menor">
-                            <span class="titulo-acento"></span>
-                            <h2>SERVIÇO</h2>
-                        </div>
+                        <section class="verificacao-grupo">
+                            <div class="titulo-secao titulo-secao-menor">
+                                <span class="titulo-acento"></span>
+                                <h2>SERVIÇO</h2>
+                            </div>
 
-                        <div class="lista-servicos-agendamento">
-                            <input type="radio" name="servico" id="servico-corte-classico" value="Corte Clássico" class="opcao-input">
-                            <label for="servico-corte-classico" class="opcao-servico">CORTE CLÁSSICO</label>
+                            <div class="verificacao-caixa resumo-servico">
+                                <span class="valor-servico valor-corte-classico">
+                                    <span class="valor-principal">CORTE CLÁSSICO</span>
+                                    <span class="valor-destaque">R$ 45</span>
+                                </span>
 
-                            <input type="radio" name="servico" id="servico-barba-premium" value="Barba Premium" class="opcao-input">
-                            <label for="servico-barba-premium" class="opcao-servico">BARBA PREMIUM</label>
+                                <span class="valor-servico valor-barba-premium">
+                                    <span class="valor-principal">BARBA PREMIUM</span>
+                                    <span class="valor-destaque">R$ 35</span>
+                                </span>
 
-                            <input type="radio" name="servico" id="servico-combo-completo" value="Combo Completo" class="opcao-input">
-                            <label for="servico-combo-completo" class="opcao-servico">COMBO COMPLETO</label>
+                                <span class="valor-servico valor-combo-completo">
+                                    <span class="valor-principal">COMBO COMPLETO</span>
+                                    <span class="valor-destaque">R$ 70</span>
+                                </span>
 
-                            <input type="radio" name="servico" id="servico-acabamento" value="Acabamento" class="opcao-input">
-                            <label for="servico-acabamento" class="opcao-servico">ACABAMENTO</label>
-                        </div>
+                                <span class="valor-servico valor-acabamento">
+                                    <span class="valor-principal">ACABAMENTO</span>
+                                    <span class="valor-destaque">R$ 25</span>
+                                </span>
+                            </div>
+                        </section>
 
                         <!-- Dia -->
-                        <div class="titulo-secao titulo-secao-menor">
-                            <span class="titulo-acento"></span>
-                            <h2>DIA DO AGENDAMENTO</h2>
-                        </div>
+                        <section class="verificacao-grupo">
+                            <div class="titulo-secao titulo-secao-menor">
+                                <span class="titulo-acento"></span>
+                                <h2>DIA DO AGENDAMENTO</h2>
+                            </div>
 
-                        <div class="lista-dias">
-                            <input type="radio" name="dia" id="dia-seg-12" value="12" class="opcao-input">
-                            <label for="dia-seg-12" class="opcao-dia">SEG 12</label>
+                            <div class="verificacao-caixa resumo-dia">
+                                <span class="valor-dia valor-seg-12">
+                                    <span class="valor-principal">SEGUNDA-FEIRA</span>
+                                    <span class="valor-destaque">12/05/2026</span>
+                                </span>
 
-                            <input type="radio" name="dia" id="dia-ter-13" value="13" class="opcao-input" checked>
-                            <label for="dia-ter-13" class="opcao-dia">TER 13</label>
+                                <span class="valor-dia valor-ter-13">
+                                    <span class="valor-principal">TERÇA-FEIRA</span>
+                                    <span class="valor-destaque">13/05/2026</span>
+                                </span>
 
-                            <input type="radio" name="dia" id="dia-qua-14" value="14" class="opcao-input">
-                            <label for="dia-qua-14" class="opcao-dia">QUA 14</label>
+                                <span class="valor-dia valor-qua-14">
+                                    <span class="valor-principal">QUARTA-FEIRA</span>
+                                    <span class="valor-destaque">14/05/2026</span>
+                                </span>
 
-                            <input type="radio" name="dia" id="dia-qui-15" value="15" class="opcao-input">
-                            <label for="dia-qui-15" class="opcao-dia">QUI 15</label>
+                                <span class="valor-dia valor-qui-15">
+                                    <span class="valor-principal">QUINTA-FEIRA</span>
+                                    <span class="valor-destaque">15/05/2026</span>
+                                </span>
 
-                            <input type="radio" name="dia" id="dia-sex-16" value="16" class="opcao-input">
-                            <label for="dia-sex-16" class="opcao-dia">SEX 16</label>
+                                <span class="valor-dia valor-sex-16">
+                                    <span class="valor-principal">SEXTA-FEIRA</span>
+                                    <span class="valor-destaque">16/05/2026</span>
+                                </span>
 
-                            <input type="radio" name="dia" id="dia-sab-17" value="17" class="opcao-input">
-                            <label for="dia-sab-17" class="opcao-dia">SÁB 17</label>
-                        </div>
+                                <span class="valor-dia valor-sab-17">
+                                    <span class="valor-principal">SÁBADO</span>
+                                    <span class="valor-destaque">17/05/2026</span>
+                                </span>
+                            </div>
+                        </section>
 
                         <!-- Horário -->
-                        <div class="titulo-secao titulo-secao-menor">
-                            <span class="titulo-acento"></span>
-                            <h2>HORÁRIO</h2>
+                        <section class="verificacao-grupo">
+                            <div class="titulo-secao titulo-secao-menor">
+                                <span class="titulo-acento"></span>
+                                <h2>HORÁRIO</h2>
+                            </div>
+
+                            <div class="verificacao-caixa resumo-horario">
+                                <span class="valor-horario valor-0900">
+                                    <span class="valor-principal">HORAS</span>
+                                    <span class="valor-destaque">09:00</span>
+                                </span>
+
+                                <span class="valor-horario valor-1030">
+                                    <span class="valor-principal">HORAS</span>
+                                    <span class="valor-destaque">10:30</span>
+                                </span>
+
+                                <span class="valor-horario valor-1300">
+                                    <span class="valor-principal">HORAS</span>
+                                    <span class="valor-destaque">13:00</span>
+                                </span>
+
+                                <span class="valor-horario valor-1430">
+                                    <span class="valor-principal">HORAS</span>
+                                    <span class="valor-destaque">14:30</span>
+                                </span>
+
+                                <span class="valor-horario valor-1700">
+                                    <span class="valor-principal">HORAS</span>
+                                    <span class="valor-destaque">17:00</span>
+                                </span>
+
+                                <span class="valor-horario valor-1830">
+                                    <span class="valor-principal">HORAS</span>
+                                    <span class="valor-destaque">18:30</span>
+                                </span>
+                            </div>
+                        </section>
+                    </div>
+
+                    <!-- Ações -->
+                    <footer class="rodape-confirmacao">
+                        <p class="mensagem-confirmacao">Tudo certo? Confirme abaixo para concluir seu agendamento.</p>
+
+                        <div class="acoes-confirmacao">
+                            <label for="agendamento-concluido" class="botao botao-confirmar">CONFIRMAR AGENDAMENTO</label>
+                            <label for="etapa-confirmacao" class="botao botao-alterar">ALTERAR DATA OU HORÁRIO</label>
                         </div>
 
-                        <div class="lista-horarios">
-                            <input type="radio" name="horario" id="hora-0900" value="09:00" class="opcao-input">
-                            <label for="hora-0900" class="opcao-horario">09:00</label>
-
-                            <input type="radio" name="horario" id="hora-1030" value="10:30" class="opcao-input">
-                            <label for="hora-1030" class="opcao-horario">10:30</label>
-
-                            <input type="radio" name="horario" id="hora-1300" value="13:00" class="opcao-input">
-                            <label for="hora-1300" class="opcao-horario">13:00</label>
-
-                            <input type="radio" name="horario" id="hora-1430" value="14:30" class="opcao-input" checked>
-                            <label for="hora-1430" class="opcao-horario">14:30</label>
-
-                            <input type="radio" name="horario" id="hora-1700" value="17:00" class="opcao-input">
-                            <label for="hora-1700" class="opcao-horario">17:00</label>
-
-                            <input type="radio" name="horario" id="hora-1830" value="18:30" class="opcao-input">
-                            <label for="hora-1830" class="opcao-horario">18:30</label>
-                        </div>
-                    </div>
-
-                    <!-- Comentários -->
-                    <div class="comentarios-confirmacao">
-                        <div class="titulo-secao titulo-secao-menor">
-                            <span class="titulo-acento"></span>
-                            <h2>COMENTÁRIOS</h2>
-                        </div>
-
-                        <textarea name="comentarios" class="campo-comentarios" placeholder="Ex.: gostaria de um corte mais baixo nas laterais..."></textarea>
-
-                        <label for="etapa-confirmacao" class="botao botao-agendar">AGENDAR</label>
-                    </div>
+                        <p class="aviso-confirmacao">Ao confirmar, seu horário ficará reservado.</p>
+                    </footer>
                 </div>
-            </div>
-        </main>
+            </section>
 
-        <!-- Confirmação -->
-        <main class="pagina tela-confirmacao">
-            <div class="conteudo">
+            <!-- Sucesso -->
+            <section class="pagina tela-sucesso" aria-labelledby="titulo-sucesso">
+                <div class="conteudo-sucesso">
+                    <div class="icone-sucesso" aria-hidden="true">✓</div>
 
-                <!-- Título -->
-                <div class="titulo-secao">
-                    <span class="titulo-acento"></span>
-                    <h1>CONFIRA SEU HORÁRIO</h1>
-                </div>
-
-                <!-- Resumo -->
-                <div class="resumo-agendamento">
-
-                    <!-- Profissional -->
-                    <div class="resumo-item">
-                        <span class="resumo-label">PROFISSIONAL</span>
-
-                        <span class="resumo-valor resumo-profissional">
-                            <span class="valor-profissional profissional-nao-informado">NÃO INFORMADO</span>
-                            <span class="valor-profissional profissional-gabriel">GABRIEL</span>
-                            <span class="valor-profissional profissional-lucas">LUCAS</span>
-                            <span class="valor-profissional profissional-andre">ANDRÉ</span>
-                            <span class="valor-profissional profissional-bruna">BRUNA</span>
-                            <span class="valor-profissional profissional-aline">ALINE</span>
-                            <span class="valor-profissional profissional-flavia">FLÁVIA</span>
-                        </span>
+                    <div class="texto-sucesso">
+                        <h1 id="titulo-sucesso">AGENDAMENTO CONFIRMADO!</h1>
+                        <p>Seu horário foi reservado com sucesso.</p>
+                        <span>Esperamos você na PD Barber.</span>
                     </div>
 
-                    <!-- Serviço -->
-                    <div class="resumo-item">
-                        <span class="resumo-label">SERVIÇO</span>
-
-                        <span class="resumo-valor resumo-servico">
-                            <span class="valor-servico valor-corte-classico">CORTE CLÁSSICO</span>
-                            <span class="valor-servico valor-barba-premium">BARBA PREMIUM</span>
-                            <span class="valor-servico valor-combo-completo">COMBO COMPLETO</span>
-                            <span class="valor-servico valor-acabamento">ACABAMENTO</span>
-                        </span>
-                    </div>
-
-                    <!-- Dia -->
-                    <div class="resumo-item">
-                        <span class="resumo-label">DIA DO AGENDAMENTO</span>
-
-                        <span class="resumo-valor resumo-dia">
-                            <span class="valor-dia valor-seg-12">SEGUNDA-FEIRA • 12/05/2026</span>
-                            <span class="valor-dia valor-ter-13">TERÇA-FEIRA • 13/05/2026</span>
-                            <span class="valor-dia valor-qua-14">QUARTA-FEIRA • 14/05/2026</span>
-                            <span class="valor-dia valor-qui-15">QUINTA-FEIRA • 15/05/2026</span>
-                            <span class="valor-dia valor-sex-16">SEXTA-FEIRA • 16/05/2026</span>
-                            <span class="valor-dia valor-sab-17">SÁBADO • 17/05/2026</span>
-                        </span>
-                    </div>
-
-                    <!-- Horário -->
-                    <div class="resumo-item">
-                        <span class="resumo-label">HORÁRIO</span>
-
-                        <span class="resumo-valor resumo-horario">
-                            <span class="valor-horario valor-0900">09:00</span>
-                            <span class="valor-horario valor-1030">10:30</span>
-                            <span class="valor-horario valor-1300">13:00</span>
-                            <span class="valor-horario valor-1430">14:30</span>
-                            <span class="valor-horario valor-1700">17:00</span>
-                            <span class="valor-horario valor-1830">18:30</span>
-                        </span>
-                    </div>
-
-                    <p class="mensagem-confirmacao">Tudo certo? Confirme abaixo para concluir seu agendamento.</p>
+                    <a href="../../index.html" class="botao botao-inicio">VOLTAR AO INÍCIO</a>
                 </div>
-
-                <!-- Ações -->
-                <div class="acoes-confirmacao">
-                    <label for="agendamento-concluido" class="botao botao-confirmar">CONFIRMAR AGENDAMENTO</label>
-                    <label for="etapa-confirmacao" class="botao botao-alterar">ALTERAR DATA OU HORÁRIO</label>
-                </div>
-
-                <p class="aviso-confirmacao">Ao confirmar, seu horário ficará reservado.</p>
-            </div>
-        </main>
-
-        <!-- Agendamento concluído -->
-        <main class="pagina tela-sucesso">
-            <div class="conteudo-sucesso">
-                <div class="icone-sucesso">✓</div>
-
-                <div class="texto-sucesso">
-                    <h1>AGENDAMENTO CONFIRMADO!</h1>
-                    <p>Seu horário foi reservado com sucesso.</p>
-                    <span>Esperamos você na PD Barber.</span>
-                </div>
-
-                <a href="../../index.html" class="botao botao-inicio">VOLTAR AO INÍCIO</a>
-            </div>
-        </main>
-    </form>
+            </section>
+        </form>
+    </main>
 </body>
 </html>

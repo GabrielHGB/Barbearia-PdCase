@@ -22,8 +22,8 @@
     <header class="cabecalho">
         <a href="../../index.html" class="logo">PD BARBER</a>
 
-        <!-- Navegação principal -->
-        <nav class="navegacao-principal">
+        <!-- Navegação desktop -->
+        <nav class="navegacao-principal" aria-label="Navegação principal">
             <a href="../../index.html" class="nav-item">
                 <span>Início</span>
                 <span class="nav-indicador"></span>
@@ -46,163 +46,274 @@
         </nav>
 
         <a href="Profissionais.html" class="botao botao-header">AGENDAR HORÁRIO</a>
+
+        <!-- Cabeçalho mobile -->
+        <a href="Profissionais.html" class="cabecalho-mobile-voltar" aria-label="Voltar para profissionais">&lt;</a>
+        <span class="cabecalho-mobile-titulo">GALERIA</span>
     </header>
 
-    <!-- Conteúdo principal -->
+    <!-- Conteúdo -->
     <main class="pagina">
+        <h1 class="sr-only">Galeria dos profissionais da PD Barber</h1>
+
         <div class="conteudo">
 
             <!-- Gabriel -->
-            <section class="galeria-profissional" id="gabriel">
-                <div class="titulo-secao">
+            <section class="galeria-profissional" id="gabriel" aria-labelledby="nome-gabriel">
+
+                <!-- Título desktop -->
+                <div class="titulo-secao titulo-pagina">
                     <span class="titulo-acento"></span>
-                    <h1>GALERIA</h1>
+                    <h2>GALERIA</h2>
                 </div>
 
-                <!-- Profissional em destaque -->
-                <div class="profissional-destaque">
+                <!-- Título mobile -->
+                <div class="titulo-secao titulo-profissional-mobile">
+                    <span class="titulo-acento"></span>
+                    <h2>PROFISSIONAL</h2>
+                </div>
+
+                <!-- Profissional -->
+                <article class="profissional-destaque">
                     <img class="profissional-foto" src="../img/GabrielBarbeiro.png" alt="Barbeiro Gabriel">
 
                     <div class="profissional-informacoes">
-                        <h2 class="nome-profissional">Gabriel</h2>
+                        <h2 class="nome-profissional" id="nome-gabriel">Gabriel</h2>
                         <p class="descricao-profissional">Especialista em cortes clássicos e degradê.</p>
-                        <h2 class="titulo-trabalhos">TRABALHOS RECENTES</h2>
                     </div>
-                </div>
+                </article>
 
                 <!-- Trabalhos -->
-                <div class="grade-imagens">
-                    <img class="imagem-destaque" src="../img/GaleriaCorte.png" alt="Trabalho realizado na PD Barber">
-
-                    <div class="imagens-secundarias">
-                        <img src="../img/GaleriaCabelo02.png" alt="Trabalho realizado na PD Barber">
-                        <img src="../img/GaleriaCorteFreestyle.png" alt="Trabalho realizado na PD Barber">
+                <section class="trabalhos" aria-labelledby="trabalhos-gabriel">
+                    <div class="titulo-secao">
+                        <span class="titulo-acento"></span>
+                        <h2 id="trabalhos-gabriel">TRABALHOS RECENTES</h2>
                     </div>
-                </div>
+
+                    <div class="grade-imagens">
+                        <figure class="imagem-destaque">
+                            <img src="../img/GaleriaCorte.png" alt="Trabalho realizado por Gabriel">
+                        </figure>
+
+                        <div class="imagens-secundarias">
+                            <figure>
+                                <img src="../img/GaleriaCabelo02.png" alt="Corte masculino realizado na PD Barber">
+                            </figure>
+
+                            <figure>
+                                <img src="../img/GaleriaCorteFreestyle.png" alt="Corte freestyle realizado na PD Barber">
+                            </figure>
+                        </div>
+                    </div>
+                </section>
 
                 <a href="Agendamentos.html#gabriel" class="botao botao-agendar">AGENDAR COM GABRIEL</a>
             </section>
 
             <!-- Lucas -->
-            <section class="galeria-profissional" id="lucas">
-                <div class="titulo-secao">
+            <section class="galeria-profissional" id="lucas" aria-labelledby="nome-lucas">
+
+                <!-- Título desktop -->
+                <div class="titulo-secao titulo-pagina">
                     <span class="titulo-acento"></span>
-                    <h1>GALERIA</h1>
+                    <h2>GALERIA</h2>
                 </div>
 
-                <!-- Profissional em destaque -->
-                <div class="profissional-destaque">
+                <!-- Título mobile -->
+                <div class="titulo-secao titulo-profissional-mobile">
+                    <span class="titulo-acento"></span>
+                    <h2>PROFISSIONAL</h2>
+                </div>
+
+                <!-- Profissional -->
+                <article class="profissional-destaque">
                     <img class="profissional-foto" src="../img/LucasBarbeiro.png" alt="Barbeiro Lucas">
 
                     <div class="profissional-informacoes">
-                        <h2 class="nome-profissional">Lucas</h2>
+                        <h2 class="nome-profissional" id="nome-lucas">Lucas</h2>
                         <p class="descricao-profissional">Especialista em barba e visagismo.</p>
-                        <h2 class="titulo-trabalhos">TRABALHOS RECENTES</h2>
                     </div>
-                </div>
+                </article>
 
                 <!-- Trabalhos -->
-                <div class="grade-imagens">
-                    <img class="imagem-destaque" src="../img/GaleriaCorte.png" alt="Trabalho realizado na PD Barber">
-
-                    <div class="imagens-secundarias">
-                        <img src="../img/GaleriaCabelo02.png" alt="Trabalho realizado na PD Barber">
-                        <img src="../img/GaleriaCorteFreestyle.png" alt="Trabalho realizado na PD Barber">
+                <section class="trabalhos" aria-labelledby="trabalhos-lucas">
+                    <div class="titulo-secao">
+                        <span class="titulo-acento"></span>
+                        <h2 id="trabalhos-lucas">TRABALHOS RECENTES</h2>
                     </div>
-                </div>
+
+                    <div class="grade-imagens">
+                        <figure class="imagem-destaque">
+                            <img src="../img/GaleriaCorte.png" alt="Trabalho realizado por Lucas">
+                        </figure>
+
+                        <div class="imagens-secundarias">
+                            <figure>
+                                <img src="../img/GaleriaCabelo02.png" alt="Corte masculino realizado na PD Barber">
+                            </figure>
+
+                            <figure>
+                                <img src="../img/GaleriaCorteFreestyle.png" alt="Corte freestyle realizado na PD Barber">
+                            </figure>
+                        </div>
+                    </div>
+                </section>
 
                 <a href="Agendamentos.html#lucas" class="botao botao-agendar">AGENDAR COM LUCAS</a>
             </section>
 
             <!-- André -->
-            <section class="galeria-profissional" id="andre">
-                <div class="titulo-secao">
+            <section class="galeria-profissional" id="andre" aria-labelledby="nome-andre">
+
+                <!-- Título desktop -->
+                <div class="titulo-secao titulo-pagina">
                     <span class="titulo-acento"></span>
-                    <h1>GALERIA</h1>
+                    <h2>GALERIA</h2>
                 </div>
 
-                <!-- Profissional em destaque -->
-                <div class="profissional-destaque">
+                <!-- Título mobile -->
+                <div class="titulo-secao titulo-profissional-mobile">
+                    <span class="titulo-acento"></span>
+                    <h2>PROFISSIONAL</h2>
+                </div>
+
+                <!-- Profissional -->
+                <article class="profissional-destaque">
                     <img class="profissional-foto" src="../img/AndréBarbeiro.png" alt="Barbeiro André">
 
                     <div class="profissional-informacoes">
-                        <h2 class="nome-profissional">André</h2>
+                        <h2 class="nome-profissional" id="nome-andre">André</h2>
                         <p class="descricao-profissional">Especialista em cortes modernos.</p>
-                        <h2 class="titulo-trabalhos">TRABALHOS RECENTES</h2>
                     </div>
-                </div>
+                </article>
 
                 <!-- Trabalhos -->
-                <div class="grade-imagens">
-                    <img class="imagem-destaque" src="../img/GaleriaCorte.png" alt="Trabalho realizado na PD Barber">
-
-                    <div class="imagens-secundarias">
-                        <img src="../img/GaleriaCabelo02.png" alt="Trabalho realizado na PD Barber">
-                        <img src="../img/GaleriaCorteFreestyle.png" alt="Trabalho realizado na PD Barber">
+                <section class="trabalhos" aria-labelledby="trabalhos-andre">
+                    <div class="titulo-secao">
+                        <span class="titulo-acento"></span>
+                        <h2 id="trabalhos-andre">TRABALHOS RECENTES</h2>
                     </div>
-                </div>
+
+                    <div class="grade-imagens">
+                        <figure class="imagem-destaque">
+                            <img src="../img/GaleriaCorte.png" alt="Trabalho realizado por André">
+                        </figure>
+
+                        <div class="imagens-secundarias">
+                            <figure>
+                                <img src="../img/GaleriaCabelo02.png" alt="Corte masculino realizado na PD Barber">
+                            </figure>
+
+                            <figure>
+                                <img src="../img/GaleriaCorteFreestyle.png" alt="Corte freestyle realizado na PD Barber">
+                            </figure>
+                        </div>
+                    </div>
+                </section>
 
                 <a href="Agendamentos.html#andre" class="botao botao-agendar">AGENDAR COM ANDRÉ</a>
             </section>
 
             <!-- Bruna -->
-            <section class="galeria-profissional" id="bruna">
-                <div class="titulo-secao">
+            <section class="galeria-profissional" id="bruna" aria-labelledby="nome-bruna">
+
+                <!-- Título desktop -->
+                <div class="titulo-secao titulo-pagina">
                     <span class="titulo-acento"></span>
-                    <h1>GALERIA</h1>
+                    <h2>GALERIA</h2>
                 </div>
 
-                <!-- Profissional em destaque -->
-                <div class="profissional-destaque">
+                <!-- Título mobile -->
+                <div class="titulo-secao titulo-profissional-mobile">
+                    <span class="titulo-acento"></span>
+                    <h2>PROFISSIONAL</h2>
+                </div>
+
+                <!-- Profissional -->
+                <article class="profissional-destaque">
                     <img class="profissional-foto" src="../img/Bruna.png" alt="Barbeira Bruna">
 
                     <div class="profissional-informacoes">
-                        <h2 class="nome-profissional">Bruna</h2>
+                        <h2 class="nome-profissional" id="nome-bruna">Bruna</h2>
                         <p class="descricao-profissional">Especialista em acabamento e freestyle.</p>
-                        <h2 class="titulo-trabalhos">TRABALHOS RECENTES</h2>
                     </div>
-                </div>
+                </article>
 
                 <!-- Trabalhos -->
-                <div class="grade-imagens">
-                    <img class="imagem-destaque" src="../img/GaleriaCorte.png" alt="Trabalho realizado na PD Barber">
-
-                    <div class="imagens-secundarias">
-                        <img src="../img/GaleriaCabelo02.png" alt="Trabalho realizado na PD Barber">
-                        <img src="../img/GaleriaCorteFreestyle.png" alt="Trabalho realizado na PD Barber">
+                <section class="trabalhos" aria-labelledby="trabalhos-bruna">
+                    <div class="titulo-secao">
+                        <span class="titulo-acento"></span>
+                        <h2 id="trabalhos-bruna">TRABALHOS RECENTES</h2>
                     </div>
-                </div>
+
+                    <div class="grade-imagens">
+                        <figure class="imagem-destaque">
+                            <img src="../img/GaleriaCorte.png" alt="Trabalho realizado por Bruna">
+                        </figure>
+
+                        <div class="imagens-secundarias">
+                            <figure>
+                                <img src="../img/GaleriaCabelo02.png" alt="Corte masculino realizado na PD Barber">
+                            </figure>
+
+                            <figure>
+                                <img src="../img/GaleriaCorteFreestyle.png" alt="Corte freestyle realizado na PD Barber">
+                            </figure>
+                        </div>
+                    </div>
+                </section>
 
                 <a href="Agendamentos.html#bruna" class="botao botao-agendar">AGENDAR COM BRUNA</a>
             </section>
 
             <!-- Aline -->
-            <section class="galeria-profissional" id="aline">
-                <div class="titulo-secao">
+            <section class="galeria-profissional" id="aline" aria-labelledby="nome-aline">
+
+                <!-- Título desktop -->
+                <div class="titulo-secao titulo-pagina">
                     <span class="titulo-acento"></span>
-                    <h1>GALERIA</h1>
+                    <h2>GALERIA</h2>
                 </div>
 
-                <!-- Profissional em destaque -->
-                <div class="profissional-destaque">
+                <!-- Título mobile -->
+                <div class="titulo-secao titulo-profissional-mobile">
+                    <span class="titulo-acento"></span>
+                    <h2>PROFISSIONAL</h2>
+                </div>
+
+                <!-- Profissional -->
+                <article class="profissional-destaque">
                     <img class="profissional-foto" src="../img/Aline.png" alt="Barbeira Aline">
 
                     <div class="profissional-informacoes">
-                        <h2 class="nome-profissional">Aline</h2>
+                        <h2 class="nome-profissional" id="nome-aline">Aline</h2>
                         <p class="descricao-profissional">Especialista em cabelo e barba.</p>
-                        <h2 class="titulo-trabalhos">TRABALHOS RECENTES</h2>
                     </div>
-                </div>
+                </article>
 
                 <!-- Trabalhos -->
-                <div class="grade-imagens">
-                    <img class="imagem-destaque" src="../img/GaleriaCorte.png" alt="Trabalho realizado na PD Barber">
-
-                    <div class="imagens-secundarias">
-                        <img src="../img/GaleriaCabelo02.png" alt="Trabalho realizado na PD Barber">
-                        <img src="../img/GaleriaCorteFreestyle.png" alt="Trabalho realizado na PD Barber">
+                <section class="trabalhos" aria-labelledby="trabalhos-aline">
+                    <div class="titulo-secao">
+                        <span class="titulo-acento"></span>
+                        <h2 id="trabalhos-aline">TRABALHOS RECENTES</h2>
                     </div>
-                </div>
+
+                    <div class="grade-imagens">
+                        <figure class="imagem-destaque">
+                            <img src="../img/GaleriaCorte.png" alt="Trabalho realizado por Aline">
+                        </figure>
+
+                        <div class="imagens-secundarias">
+                            <figure>
+                                <img src="../img/GaleriaCabelo02.png" alt="Corte masculino realizado na PD Barber">
+                            </figure>
+
+                            <figure>
+                                <img src="../img/GaleriaCorteFreestyle.png" alt="Corte freestyle realizado na PD Barber">
+                            </figure>
+                        </div>
+                    </div>
+                </section>
 
                 <a href="Agendamentos.html#aline" class="botao botao-agendar">AGENDAR COM ALINE</a>
             </section>

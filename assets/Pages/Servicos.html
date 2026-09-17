@@ -20,16 +20,16 @@
 
     <!-- Cabeçalho -->
     <header class="cabecalho">
-        <a href="index.html" class="logo">PD BARBER</a>
+        <a href="../../index.html" class="logo">PD BARBER</a>
 
-        <!-- Navegação principal -->
-        <nav class="navegacao-principal">
+        <!-- Navegação desktop -->
+        <nav class="navegacao-principal" aria-label="Navegação principal">
             <a href="../../index.html" class="nav-item">
                 <span>Início</span>
                 <span class="nav-indicador"></span>
             </a>
 
-            <a href="#" class="nav-item ativo">
+            <a href="Servicos.html" class="nav-item ativo" aria-current="page">
                 <span>Serviços</span>
                 <span class="nav-indicador"></span>
             </a>
@@ -45,7 +45,11 @@
             </a>
         </nav>
 
-        <a href="#" class="botao botao-header">AGENDAR HORÁRIO</a>
+        <a href="Profissionais.html" class="botao botao-header">AGENDAR HORÁRIO</a>
+
+        <!-- Cabeçalho mobile -->
+        <a href="../../index.html" class="cabecalho-mobile-voltar" aria-label="Voltar para o início">‹</a>
+        <span class="cabecalho-mobile-titulo" aria-hidden="true">SERVIÇOS</span>
     </header>
 
     <!-- Conteúdo principal -->
@@ -53,116 +57,120 @@
         <div class="conteudo">
 
             <!-- Título -->
-            <div class="titulo-secao">
+            <header class="titulo-secao titulo-principal">
                 <span class="titulo-acento"></span>
                 <h1>SERVIÇOS</h1>
-            </div>
+            </header>
 
-            <!-- Introdução e busca -->
-            <section class="introducao-servicos">
+            <!-- Introdução -->
+            <section class="introducao-servicos" aria-labelledby="titulo-introducao">
                 <div class="introducao-texto">
-                    <h2>Encontre o serviço ideal</h2>
+                    <h2 id="titulo-introducao">Encontre o serviço ideal</h2>
                     <p>Cortes, barba e cuidados completos.</p>
                 </div>
 
-                <div class="campo-busca">
-                    <input type="search" placeholder="Buscar serviços..." aria-label="Buscar serviços">
-                </div>
+                <form class="campo-busca" role="search">
+                    <label for="buscar-servico" class="sr-only">Buscar serviços</label>
+                    <input type="search" id="buscar-servico" name="busca" placeholder="Buscar serviços...">
+                </form>
             </section>
 
-            <!-- Catálogo de serviços -->
-            <section class="catalogo-servicos">
+            <!-- Catálogo -->
+            <fieldset class="catalogo-servicos">
+                <legend class="sr-only">Filtrar serviços por categoria</legend>
 
-                <!-- Controles dos filtros -->
+                <!-- Filtros -->
                 <input type="radio" name="filtro-servicos" id="filtro-todos" class="filtro-radio" checked>
                 <input type="radio" name="filtro-servicos" id="filtro-corte" class="filtro-radio">
                 <input type="radio" name="filtro-servicos" id="filtro-barba" class="filtro-radio">
 
-                <!-- Filtros -->
                 <div class="filtros">
                     <label for="filtro-todos" class="filtro">TODOS</label>
                     <label for="filtro-corte" class="filtro">CORTE</label>
                     <label for="filtro-barba" class="filtro">BARBA</label>
                 </div>
 
-                <!-- Lista de serviços -->
-                <div class="lista-servicos">
+                <!-- Serviços -->
+                <ul class="lista-servicos">
 
-                    <article class="servico-card corte">
-                        <a href="DetalhesServicos.html#corte-classico">
-                        <img class="servico-imagem" src="../img/CorteClassico.png" alt="Corte clássico masculino">
+                    <li class="servico-item corte">
+                        <article class="servico-card">
+                            <a href="DetalhesServicos.html#corte-classico" class="servico-link">
+                                <img class="servico-imagem" src="../img/CorteClassico.png" alt="Corte clássico masculino">
 
-                        <div class="card-linha-dourada"></div>
+                                <div class="card-linha-dourada"></div>
 
-                        <div class="servico-informacoes">
-                            <div class="servico-topo">
-                                <h3>Corte Clássico</h3>
-                                <span class="preco">R$ 45</span>
-                            </div>
+                                <div class="servico-informacoes">
+                                    <div class="servico-topo">
+                                        <h2>Corte Clássico</h2>
+                                        <span class="preco">R$ 45</span>
+                                    </div>
 
-                            <p>Corte personalizado e acabamento.</p>
-                        </div>
-                        </a>
-                    </article>
-                  
+                                    <p>Corte personalizado e acabamento.</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
 
-                    <article class="servico-card barba"><a href="DetalhesServicos.html#barba-premium">
-                        <img class="servico-imagem" src="../img/BarbaPremium.png" alt="Serviço de barba premium">
+                    <li class="servico-item barba">
+                        <article class="servico-card">
+                            <a href="DetalhesServicos.html#barba-premium" class="servico-link">
+                                <img class="servico-imagem" src="../img/BarbaPremium.png" alt="Serviço de barba premium">
 
-                        <div class="card-linha-dourada"></div>
+                                <div class="card-linha-dourada"></div>
 
-                        <div class="servico-informacoes">
-                            <div class="servico-topo">
-                                <h3>Barba Premium</h3>
-                                <span class="preco">R$ 35</span>
-                            </div>
+                                <div class="servico-informacoes">
+                                    <div class="servico-topo">
+                                        <h2>Barba Premium</h2>
+                                        <span class="preco">R$ 35</span>
+                                    </div>
 
-                            <p>Modelagem, toalha quente e acabamento.</p>
-                        </div>
-                        </a>
-                    </article>
-                    
+                                    <p>Modelagem, toalha quente e acabamento.</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
 
-                    <article class="servico-card corte barba"><a href="DetalhesServicos.html#combo-completo">
-                        <img class="servico-imagem" src="../img/ComboCompleto.png" alt="Combo completo de cabelo e barba">
+                    <li class="servico-item corte barba">
+                        <article class="servico-card">
+                            <a href="DetalhesServicos.html#combo-completo" class="servico-link">
+                                <img class="servico-imagem" src="../img/ComboCompleto.png" alt="Combo completo de cabelo e barba">
 
-                        <div class="card-linha-dourada"></div>
+                                <div class="card-linha-dourada"></div>
 
-                        <div class="servico-informacoes">
-                            <div class="servico-topo">
-                                <h3>Combo Completo</h3>
-                                <span class="preco">R$ 70</span>
-                            </div>
+                                <div class="servico-informacoes">
+                                    <div class="servico-topo">
+                                        <h2>Combo Completo</h2>
+                                        <span class="preco">R$ 70</span>
+                                    </div>
 
-                            <p>Cabelo + barba em uma experiência completa.</p>
-                        </div>
-                        </a>
-                    </article>
-                    
+                                    <p>Cabelo + barba em uma experiência completa.</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
 
-                    <article class="servico-card corte"><a href="DetalhesServicos.html#acabamento">
-                        <img class="servico-imagem" src="../img/Acabamento.png" alt="Serviço de acabamento">
+                    <li class="servico-item corte">
+                        <article class="servico-card">
+                            <a href="DetalhesServicos.html#acabamento" class="servico-link">
+                                <img class="servico-imagem" src="../img/Acabamento.png" alt="Serviço de acabamento">
 
-                        <div class="card-linha-dourada"></div>
+                                <div class="card-linha-dourada"></div>
 
-                        <div class="servico-informacoes">
-                            <div class="servico-topo">
-                                <h3>Acabamento</h3>
-                                <span class="preco">R$ 25</span>
-                            </div>
+                                <div class="servico-informacoes">
+                                    <div class="servico-topo">
+                                        <h2>Acabamento</h2>
+                                        <span class="preco">R$ 25</span>
+                                    </div>
 
-                            <p>Pezinho, contorno e finalização.</p>
-                        </div>
-                        </a>
-                    </article>
-                    
-
-                </div>
-            </section>
-
+                                    <p>Pezinho, contorno e finalização.</p>
+                                </div>
+                            </a>
+                        </article>
+                    </li>
+                </ul>
+            </fieldset>
         </div>
     </main>
-
 </body>
-
 </html>

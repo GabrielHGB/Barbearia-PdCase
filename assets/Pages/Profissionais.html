@@ -22,8 +22,8 @@
     <header class="cabecalho">
         <a href="../../index.html" class="logo">PD BARBER</a>
 
-        <!-- Navegação principal -->
-        <nav class="navegacao-principal">
+        <!-- Navegação desktop -->
+        <nav class="navegacao-principal" aria-label="Navegação principal">
             <a href="../../index.html" class="nav-item">
                 <span>Início</span>
                 <span class="nav-indicador"></span>
@@ -45,107 +45,109 @@
             </a>
         </nav>
 
-        <a href="#" class="botao botao-header">AGENDAR HORÁRIO</a>
+        <a href="Profissionais.html" class="botao botao-header" aria-current="page">AGENDAR HORÁRIO</a>
+
+        <!-- Cabeçalho mobile -->
+        <a href="Servicos.html" class="cabecalho-mobile-voltar" aria-label="Voltar para serviços">‹</a>
+        <span class="cabecalho-mobile-titulo" aria-hidden="true">PROFISSIONAIS</span>
     </header>
 
     <!-- Conteúdo principal -->
     <main class="pagina">
-        <div class="conteudo">
+        <section class="conteudo" aria-labelledby="titulo-profissionais">
 
             <!-- Título -->
-            <div class="titulo-secao">
-                <span class="titulo-acento"></span>
-                <h1>PROFISSIONAIS</h1>
-            </div>
+            <header class="cabecalho-profissionais">
+                <div class="titulo-secao">
+                    <span class="titulo-acento"></span>
+                    <h1 id="titulo-profissionais">PROFISSIONAIS</h1>
+                </div>
 
-            <!-- Introdução -->
-            <section class="introducao-profissionais">
-                <h2>Escolha quem vai cuidar do seu estilo</h2>
-                <p>Conheça os profissionais da nossa equipe.</p>
-            </section>
+                <div class="introducao-profissionais">
+                    <h2>Escolha quem vai cuidar do seu estilo</h2>
+                    <p>Conheça os profissionais da nossa equipe.</p>
+                </div>
+            </header>
 
-            <!-- Lista de profissionais -->
-<section class="lista-profissionais">
+            <!-- Profissionais -->
+            <ul class="lista-profissionais">
 
-    <a href="Galeria.html#gabriel" class="profissional-card">
-        <img
-            class="profissional-foto"
-            src="../img/GabrielBarbeiro.png"
-            alt="Barbeiro Gabriel"
-        >
+                <li>
+                    <article class="profissional-card">
+                        <a href="Galeria.html#gabriel" class="profissional-link">
+                            <img class="profissional-foto" src="../img/GabrielBarbeiro.png" alt="Barbeiro Gabriel">
 
-        <h3>Gabriel</h3>
+                            <div class="profissional-informacoes">
+                                <h3>Gabriel</h3>
+                                <p>Especialista em cortes clássicos e degradê.</p>
+                            </div>
 
-        <p>
-            Especialista em cortes clássicos e degradê.
-        </p>
-    </a>
+                            <span class="profissional-acao">SELECIONAR</span>
+                        </a>
+                    </article>
+                </li>
 
+                <li>
+                    <article class="profissional-card">
+                        <a href="Galeria.html#lucas" class="profissional-link">
+                            <img class="profissional-foto" src="../img/LucasBarbeiro.png" alt="Barbeiro Lucas">
 
-    <a href="Galeria.html#lucas" class="profissional-card">
-        <img
-            class="profissional-foto"
-            src="../img/LucasBarbeiro.png"
-            alt="Barbeiro Lucas"
-        >
+                            <div class="profissional-informacoes">
+                                <h3>Lucas</h3>
+                                <p>Especialista em barba e visagismo.</p>
+                            </div>
 
-        <h3>Lucas</h3>
+                            <span class="profissional-acao">SELECIONAR</span>
+                        </a>
+                    </article>
+                </li>
 
-        <p>
-            Especialista em barba e visagismo.
-        </p>
-    </a>
+                <li>
+                    <article class="profissional-card">
+                        <a href="Galeria.html#andre" class="profissional-link">
+                            <img class="profissional-foto" src="../img/AndréBarbeiro.png" alt="Barbeiro André">
 
+                            <div class="profissional-informacoes">
+                                <h3>André</h3>
+                                <p>Especialista em cortes modernos.</p>
+                            </div>
 
-    <a href="Galeria.html#andre" class="profissional-card">
-        <img
-            class="profissional-foto"
-            src="../img/AndréBarbeiro.png"
-            alt="Barbeiro André"
-        >
+                            <span class="profissional-acao">SELECIONAR</span>
+                        </a>
+                    </article>
+                </li>
 
-        <h3>André</h3>
+                <li>
+                    <article class="profissional-card">
+                        <a href="Galeria.html#bruna" class="profissional-link">
+                            <img class="profissional-foto" src="../img/Bruna.png" alt="Barbeira Bruna">
 
-        <p>
-            Especialista em cortes modernos.
-        </p>
-    </a>
+                            <div class="profissional-informacoes">
+                                <h3>Bruna</h3>
+                                <p>Especialista em acabamento e freestyle.</p>
+                            </div>
 
+                            <span class="profissional-acao">SELECIONAR</span>
+                        </a>
+                    </article>
+                </li>
 
-    <a href="Galeria.html#bruna" class="profissional-card">
-        <img
-            class="profissional-foto"
-            src="../img/Bruna.png"
-            alt="Barbeira Bruna"
-        >
+                <li>
+                    <article class="profissional-card">
+                        <a href="Galeria.html#aline" class="profissional-link">
+                            <img class="profissional-foto" src="../img/Aline.png" alt="Barbeira Aline">
 
-        <h3>Bruna</h3>
+                            <div class="profissional-informacoes">
+                                <h3>Aline</h3>
+                                <p>Especialista em cabelo e barba.</p>
+                            </div>
 
-        <p>
-            Especialista em acabamento e freestyle.
-        </p>
-    </a>
-
-
-    <a href="Galeria.html#aline" class="profissional-card">
-        <img
-            class="profissional-foto"
-            src="../img/Aline.png"
-            alt="Barbeira Aline"
-        >
-
-        <h3>Aline</h3>
-
-        <p>
-            Especialista em cabelo e barba.
-        </p>
-    </a>
-
-</section>
-
-        </div>
+                            <span class="profissional-acao">SELECIONAR</span>
+                        </a>
+                    </article>
+                </li>
+            </ul>
+        </section>
     </main>
-
 </body>
-
 </html>

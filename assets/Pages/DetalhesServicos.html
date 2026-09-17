@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Corte Clássico | PD Barber</title>
+    <title>Detalhes do Serviço | PD Barber</title>
 
     <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,14 +22,14 @@
     <header class="cabecalho">
         <a href="../../index.html" class="logo">PD BARBER</a>
 
-        <!-- Navegação principal -->
-        <nav class="navegacao-principal">
+        <!-- Navegação desktop -->
+        <nav class="navegacao-principal" aria-label="Navegação principal">
             <a href="../../index.html" class="nav-item">
                 <span>Início</span>
                 <span class="nav-indicador"></span>
             </a>
 
-            <a href="Servicos.html" class="nav-item ativo">
+            <a href="Servicos.html" class="nav-item ativo" aria-current="page">
                 <span>Serviços</span>
                 <span class="nav-indicador"></span>
             </a>
@@ -45,200 +45,176 @@
             </a>
         </nav>
 
-        <a href="#" class="botao botao-header">AGENDAR HORÁRIO</a>
+        <a href="Profissionais.html" class="botao botao-header">AGENDAR HORÁRIO</a>
+
+        <!-- Cabeçalho mobile -->
+        <a href="Servicos.html" class="cabecalho-mobile-voltar" aria-label="Voltar para serviços">‹</a>
+        <span class="cabecalho-mobile-titulo" aria-hidden="true">DETALHES</span>
     </header>
 
     <!-- Conteúdo principal -->
-<main class="pagina">
-    <div class="conteudo">
-        <!-- Corte Clássico -->
-        <section
-            class="detalhe-servico"
-            id="corte-classico"
-        >
-            <a href="Servicos.html" class="botao-voltar">
-                VOLTAR PARA SERVIÇOS
-            </a>
+    <main class="pagina">
+        <div class="conteudo">
 
-            <div class="detalhes-servico">
-                <div class="servico-imagem-principal">
-                    <img
-                        src="../img/CorteClassico.png"
-                        alt="Corte clássico masculino"
-                    >
+            <!-- Corte Clássico -->
+            <section class="detalhe-servico" id="corte-classico" aria-labelledby="titulo-corte-classico">
+                <a href="Servicos.html" class="botao-voltar">VOLTAR PARA SERVIÇOS</a>
 
-                    <div class="linha-dourada"></div>
-                </div>
+                <div class="detalhes-servico">
+                    <figure class="servico-imagem-principal">
+                        <img src="../img/CorteClassico.png" alt="Corte clássico masculino">
+                        <span class="linha-dourada" aria-hidden="true"></span>
+                    </figure>
 
-                <div class="servico-detalhes">
-                    <div class="servico-titulo">
-                        <h1>Corte Clássico</h1>
-                        <span class="preco">R$ 45</span>
+                    <div class="servico-detalhes">
+                        <header class="servico-titulo">
+                            <h1 id="titulo-corte-classico">Corte Clássico</h1>
+                            <span class="preco">R$ 45</span>
+                        </header>
+
+                        <p class="servico-descricao">Um corte pensado para o seu estilo, com acabamento preciso e finalização profissional.</p>
                     </div>
-
-                    <p class="servico-descricao">
-                        Um corte pensado para o seu estilo,
-                        com acabamento preciso e finalização profissional.
-                    </p>
                 </div>
-            </div>
-        </section>
+            </section>
 
+            <!-- Barba Premium -->
+            <section class="detalhe-servico" id="barba-premium" aria-labelledby="titulo-barba-premium">
+                <a href="Servicos.html" class="botao-voltar">VOLTAR PARA SERVIÇOS</a>
 
-        <!-- Barba Premium -->
-        <section
-            class="detalhe-servico"
-            id="barba-premium"
-        >
-            <a href="Servicos.html" class="botao-voltar">
-                VOLTAR PARA SERVIÇOS
-            </a>
+                <div class="detalhes-servico">
+                    <figure class="servico-imagem-principal">
+                        <img src="../img/BarbaPremium.png" alt="Serviço de barba premium">
+                        <span class="linha-dourada" aria-hidden="true"></span>
+                    </figure>
 
-            <div class="detalhes-servico">
-                <div class="servico-imagem-principal">
-                    <img
-                        src="../img/BarbaPremium.png"
-                        alt="Barba premium"
-                    >
+                    <div class="servico-detalhes">
+                        <header class="servico-titulo">
+                            <h1 id="titulo-barba-premium">Barba Premium</h1>
+                            <span class="preco">R$ 35</span>
+                        </header>
 
-                    <div class="linha-dourada"></div>
-                </div>
-
-                <div class="servico-detalhes">
-                    <div class="servico-titulo">
-                        <h1>Barba Premium</h1>
-                        <span class="preco">R$ 35</span>
+                        <p class="servico-descricao">Modelagem, toalha quente e acabamento profissional.</p>
                     </div>
-
-                    <p class="servico-descricao">
-                        Modelagem, toalha quente e acabamento profissional.
-                    </p>
                 </div>
-            </div>
-        </section>
+            </section>
 
+            <!-- Combo Completo -->
+            <section class="detalhe-servico" id="combo-completo" aria-labelledby="titulo-combo-completo">
+                <a href="Servicos.html" class="botao-voltar">VOLTAR PARA SERVIÇOS</a>
 
-        <!-- Combo Completo -->
-        <section
-            class="detalhe-servico"
-            id="combo-completo"
-        >
-            <a href="Servicos.html" class="botao-voltar">
-                VOLTAR PARA SERVIÇOS
-            </a>
+                <div class="detalhes-servico">
+                    <figure class="servico-imagem-principal">
+                        <img src="../img/ComboCompleto.png" alt="Combo completo de cabelo e barba">
+                        <span class="linha-dourada" aria-hidden="true"></span>
+                    </figure>
 
-            <div class="detalhes-servico">
-                <div class="servico-imagem-principal">
-                    <img
-                        src="../img/ComboCompleto.png"
-                        alt="Combo completo"
-                    >
+                    <div class="servico-detalhes">
+                        <header class="servico-titulo">
+                            <h1 id="titulo-combo-completo">Combo Completo</h1>
+                            <span class="preco">R$ 70</span>
+                        </header>
 
-                    <div class="linha-dourada"></div>
-                </div>
-
-                <div class="servico-detalhes">
-                    <div class="servico-titulo">
-                        <h1>Combo Completo</h1>
-                        <span class="preco">R$ 70</span>
+                        <p class="servico-descricao">Cabelo + barba em uma experiência completa.</p>
                     </div>
-
-                    <p class="servico-descricao">
-                        Cabelo + barba em uma experiência completa.
-                    </p>
                 </div>
-            </div>
-        </section>
+            </section>
 
+            <!-- Acabamento -->
+            <section class="detalhe-servico" id="acabamento" aria-labelledby="titulo-acabamento">
+                <a href="Servicos.html" class="botao-voltar">VOLTAR PARA SERVIÇOS</a>
 
-        <!-- Acabamento -->
-        <section
-            class="detalhe-servico"
-            id="acabamento"
-        >
-            <a href="Servicos.html" class="botao-voltar">
-                VOLTAR PARA SERVIÇOS
-            </a>
+                <div class="detalhes-servico">
+                    <figure class="servico-imagem-principal">
+                        <img src="../img/Acabamento.png" alt="Serviço de acabamento">
+                        <span class="linha-dourada" aria-hidden="true"></span>
+                    </figure>
 
-            <div class="detalhes-servico">
-                <div class="servico-imagem-principal">
-                    <img
-                        src="../img/Acabamento.png"
-                        alt="Acabamento"
-                    >
+                    <div class="servico-detalhes">
+                        <header class="servico-titulo">
+                            <h1 id="titulo-acabamento">Acabamento</h1>
+                            <span class="preco">R$ 25</span>
+                        </header>
 
-                    <div class="linha-dourada"></div>
-                </div>
-
-                <div class="servico-detalhes">
-                    <div class="servico-titulo">
-                        <h1>Acabamento</h1>
-                        <span class="preco">R$ 25</span>
+                        <p class="servico-descricao">Pezinho, contorno e finalização.</p>
                     </div>
-
-                    <p class="servico-descricao">
-                        Pezinho, contorno e finalização.
-                    </p>
                 </div>
-            </div>
-        </section>
+            </section>
 
             <!-- Profissionais -->
-            <section class="profissionais" id="profissionais">
+            <section class="profissionais" aria-labelledby="titulo-profissionais">
                 <div class="titulo-secao">
                     <span class="titulo-acento"></span>
-                    <h2>PROFISSIONAIS</h2>
+                    <h2 id="titulo-profissionais">PROFISSIONAIS</h2>
                 </div>
 
-                <div class="lista-profissionais">
+                <ul class="lista-profissionais">
 
-                    <article class="profissional-card">
-                        <a href="Profissionais.html">
-                        <img class="profissional-foto" src="../img/GabrielBarbeiro.png" alt="Barbeiro Gabriel">
+                    <li>
+                        <article class="profissional-card">
+                            <a href="Profissionais.html" class="profissional-link">
+                                <img class="profissional-foto" src="../img/GabrielBarbeiro.png" alt="Barbeiro Gabriel">
+                                <h3>Gabriel</h3>
+                                <p>Especialista em cortes clássicos e degradê.</p>
+                            </a>
+                        </article>
+                    </li>
 
-                        <h3>Gabriel</h3>
+                    <li>
+                        <article class="profissional-card">
+                            <a href="Profissionais.html" class="profissional-link">
+                                <img class="profissional-foto" src="../img/LucasBarbeiro.png" alt="Barbeiro Lucas">
+                                <h3>Lucas</h3>
+                                <p>Especialista em barba e visagismo.</p>
+                            </a>
+                        </article>
+                    </li>
 
-                        <p>Especialista em cortes clássicos e degradê.</p>
-                        </a>
-                    </article>
-
-                    <article class="profissional-card">
-                        <a href="Profissionais.html">
-                            <img class="profissional-foto" src="../img/LucasBarbeiro.png" alt="Barbeiro Lucas">
-                            <h3>Lucas</h3>
-                            <p>Especialista em barba e visagismo.</p>
-                        </a>
-                    </article>
-                    </article>
-
-                    <article class="profissional-card">
-                        <a href="Profissionais.html">
-                            <img class="profissional-foto" src="../img/AndréBarbeiro.png" alt="Barbeiro André">
-                            <h3>André</h3>
-                            <p>Especialista em cortes modernos.</p>
-                        </a>
-                    </article>
-
-                </div>
+                    <li>
+                        <article class="profissional-card">
+                            <a href="Profissionais.html" class="profissional-link">
+                                <img class="profissional-foto" src="../img/AndréBarbeiro.png" alt="Barbeiro André">
+                                <h3>André</h3>
+                                <p>Especialista em cortes modernos.</p>
+                            </a>
+                        </article>
+                    </li>
+                </ul>
             </section>
 
             <!-- Galeria -->
-            <section class="galeria">
+            <section class="galeria" aria-labelledby="titulo-galeria">
                 <div class="titulo-secao">
                     <span class="titulo-acento"></span>
-                    <h2>GALERIA</h2>
+                    <h2 id="titulo-galeria">GALERIA</h2>
                 </div>
 
-                <div class="lista-galeria">
-                    <img src="../img/GaleriaCorte.png" alt="Resultado de corte clássico">
-                    <img src="../img/GaleriaCabelo02.png" alt="Detalhes de corte masculino">
-                    <img src="../img/GaleriaCorteFreestyle.png" alt="Acabamento de corte masculino">
-                </div>
+                <ul class="lista-galeria">
+                    <li>
+                        <figure class="galeria-item">
+                            <img src="../img/GaleriaCorte.png" alt="Resultado de corte masculino">
+                        </figure>
+                    </li>
+
+                    <li>
+                        <figure class="galeria-item">
+                            <img src="../img/GaleriaCabelo02.png" alt="Detalhes de corte masculino">
+                        </figure>
+                    </li>
+
+                    <li>
+                        <figure class="galeria-item">
+                            <img src="../img/GaleriaCorteFreestyle.png" alt="Acabamento de corte masculino">
+                        </figure>
+                    </li>
+                </ul>
             </section>
 
+            <!-- Agendamento -->
+            <section class="acao-profissional" aria-label="Escolher profissional">
+                <a href="Profissionais.html" class="botao botao-profissional">ESCOLHER PROFISSIONAL</a>
+                <p>Você poderá escolher data e horário na próxima etapa.</p>
+            </section>
         </div>
     </main>
-
 </body>
-
 </html>

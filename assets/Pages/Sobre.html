@@ -22,8 +22,8 @@
     <header class="cabecalho">
         <a href="../../index.html" class="logo">PD BARBER</a>
 
-        <!-- Navegação principal -->
-        <nav class="navegacao-principal">
+        <!-- Navegação desktop -->
+        <nav class="navegacao-principal" aria-label="Navegação principal">
             <a href="../../index.html" class="nav-item">
                 <span>Início</span>
                 <span class="nav-indicador"></span>
@@ -34,7 +34,7 @@
                 <span class="nav-indicador"></span>
             </a>
 
-            <a href="Sobre.html" class="nav-item ativo">
+            <a href="Sobre.html" class="nav-item ativo" aria-current="page">
                 <span>Sobre</span>
                 <span class="nav-indicador"></span>
             </a>
@@ -45,34 +45,38 @@
             </a>
         </nav>
 
-        <a href="#" class="botao botao-header">AGENDAR HORÁRIO</a>
+        <a href="Profissionais.html" class="botao botao-header">AGENDAR HORÁRIO</a>
+
+        <!-- Cabeçalho mobile -->
+        <a href="../../index.html" class="cabecalho-mobile-voltar" aria-label="Voltar para o início">&lt;</a>
+        <span class="cabecalho-mobile-titulo">SOBRE</span>
     </header>
 
-    <!-- Conteúdo principal -->
+    <!-- Conteúdo -->
     <main class="pagina">
         <div class="conteudo">
 
-            <!-- Título -->
-            <div class="titulo-secao">
-                <span class="titulo-acento"></span>
-                <h1>SOBRE A BARBEARIA</h1>
-            </div>
+            <!-- Sobre -->
+            <section class="apresentacao" aria-labelledby="titulo-sobre">
 
-            <!-- Apresentação -->
-            <section class="apresentacao">
+                <!-- Título -->
+                <header class="titulo-secao titulo-sobre">
+                    <span class="titulo-acento"></span>
+                    <h1 id="titulo-sobre">SOBRE A BARBEARIA</h1>
+                </header>
 
-                <div class="imagem-barbearia">
+                <!-- Imagem -->
+                <figure class="imagem-barbearia">
                     <img src="../img/PDBarber.png" alt="Interior da PD Barber">
-                    <div class="linha-dourada"></div>
-                </div>
+                    <span class="linha-dourada" aria-hidden="true"></span>
+                </figure>
 
+                <!-- Informações -->
                 <div class="texto-institucional">
                     <h2>Mais do que um corte, criamos uma experiência.</h2>
+                    <p>Atendimento com hora marcada, cuidado nos detalhes e profissionais especializados.</p>
 
-                    <p>
-                        Atendimento com hora marcada, cuidado nos detalhes e profissionais especializados.
-                    </p>
-
+                    <!-- Números -->
                     <div class="numeros">
                         <div class="numero-item">
                             <strong>+5</strong>
@@ -85,50 +89,43 @@
                         </div>
                     </div>
                 </div>
-
             </section>
 
             <!-- Contato -->
-            <section class="contato">
+            <section class="contato" aria-labelledby="titulo-contato">
                 <div class="titulo-secao">
                     <span class="titulo-acento"></span>
-                    <h2>CONTATO</h2>
+                    <h2 id="titulo-contato">CONTATO</h2>
                 </div>
 
                 <div class="lista-contatos">
 
+                    <!-- WhatsApp -->
                     <article class="contato-card">
                         <h3>WhatsApp</h3>
-
-                        <p>
-                            Fala com a gente pelo WhatsApp e agende seu horário de forma rápida e fácil.
-                        </p>
-
-                        <span>(31) 91234-4321</span>
+                        <p>Fala com a gente pelo WhatsApp e agende seu horário de forma rápida e fácil.</p>
+                        <a href="tel:+5531912344321" class="contato-destaque">(31) 91234-4321</a>
                     </article>
 
+                    <!-- Instagram -->
                     <article class="contato-card">
                         <h3>Instagram</h3>
-
-                        <p>
-                            Acompanhe nosso trabalho, cortes, estilos e novidades da barbearia.
-                        </p>
-
-                        <span>@PDBarber</span>
+                        <p>Acompanhe nosso trabalho, cortes, estilos e novidades da barbearia.</p>
+                        <span class="contato-destaque">@PDBarber</span>
                     </article>
 
-                    <article class="contato-card">
-                        <h3>HORÁRIO</h3>
+                    <!-- Horário -->
+                    <article class="contato-card horario-card">
+                        <div class="titulo-horario">
+                            <span class="titulo-acento"></span>
+                            <h3>HORÁRIO</h3>
+                        </div>
 
-                        <p>Seg a Sáb • 09h às 20h</p>
+                        <p class="horario-texto">Seg a Sáb • 09h às 20h</p>
                     </article>
-
                 </div>
             </section>
-
         </div>
     </main>
-
 </body>
-
 </html>

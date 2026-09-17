@@ -22,8 +22,8 @@
     <header class="cabecalho">
         <a href="../../index.html" class="logo">PD BARBER</a>
 
-        <!-- Navegação principal -->
-        <nav class="navegacao-principal">
+        <!-- Navegação desktop -->
+        <nav class="navegacao-principal" aria-label="Navegação principal">
             <a href="../../index.html" class="nav-item">
                 <span>Início</span>
                 <span class="nav-indicador"></span>
@@ -39,98 +39,112 @@
                 <span class="nav-indicador"></span>
             </a>
 
-            <a href="Planos.html" class="nav-item ativo">
+            <a href="Planos.html" class="nav-item ativo" aria-current="page">
                 <span>Planos</span>
                 <span class="nav-indicador"></span>
             </a>
         </nav>
 
-        <a href="#" class="botao botao-header">AGENDAR HORÁRIO</a>
+        <a href="Profissionais.html" class="botao botao-header">AGENDAR HORÁRIO</a>
+
+        <!-- Cabeçalho mobile -->
+        <a href="../../index.html" class="cabecalho-mobile-voltar" aria-label="Voltar para o início">&lt;</a>
+        <span class="cabecalho-mobile-titulo">PLANOS</span>
     </header>
 
-    <!-- Conteúdo principal -->
+    <!-- Conteúdo -->
     <main class="pagina">
         <div class="conteudo">
 
             <!-- Título -->
-            <div class="titulo-secao">
-                <span class="titulo-acento"></span>
-                <h1>PLANOS</h1>
-            </div>
+            <header class="cabecalho-planos">
+                <div class="titulo-secao">
+                    <span class="titulo-acento"></span>
+                    <h1>PLANOS</h1>
+                </div>
 
-            <!-- Introdução -->
-            <section class="introducao-planos">
-                <h2>Cuide do visual o mês inteiro</h2>
-                <p>Escolha o plano que combina com sua rotina.</p>
-            </section>
+                <div class="introducao-planos">
+                    <h2>Cuide do visual o mês inteiro</h2>
+                    <p>Escolha o plano que combina com sua rotina.</p>
+                </div>
+            </header>
 
             <!-- Planos -->
-            <section class="area-planos">
+            <fieldset class="area-planos">
+                <legend class="sr-only">Escolha um plano mensal</legend>
 
-                <!-- Controles dos planos -->
+                <!-- Controles -->
                 <input type="radio" name="plano" id="plano-essencial" class="plano-radio">
                 <input type="radio" name="plano" id="plano-signature" class="plano-radio">
                 <input type="radio" name="plano" id="plano-black" class="plano-radio">
 
-                <div class="lista-planos">
+                <!-- Lista -->
+                <ul class="lista-planos">
 
-                    <label for="plano-essencial" class="plano-card">
-                        <div class="plano-topo">
-                            <h3>ESSENCIAL</h3>
-                            <span class="preco">R$ 79/mês</span>
-                        </div>
+                    <!-- Essencial -->
+                    <li>
+                        <label for="plano-essencial" class="plano-card">
+                            <div class="plano-topo">
+                                <h2>ESSENCIAL</h2>
+                                <span class="preco">R$ 79/mês</span>
+                            </div>
 
-                        <div class="beneficios">
-                            <p>2 cortes por mês</p>
-                            <p>Prioridade no agendamento</p>
-                        </div>
+                            <div class="beneficios">
+                                <p>2 cortes por mês</p>
+                                <p>Prioridade no agendamento</p>
+                            </div>
 
-                        <span class="botao-assinar">
-                            <span class="texto-assinar">ASSINAR</span>
-                            <span class="texto-selecionado">SELECIONADO</span>
-                        </span>
-                    </label>
+                            <span class="botao-assinar">
+                                <span class="texto-assinar">ASSINAR</span>
+                                <span class="texto-selecionado">SELECIONADO</span>
+                            </span>
+                        </label>
+                    </li>
 
-                    <label for="plano-signature" class="plano-card">
-                        <div class="plano-topo">
-                            <h3>SIGNATURE</h3>
-                            <span class="preco">R$ 129/mês</span>
-                        </div>
+                    <!-- Signature -->
+                    <li>
+                        <label for="plano-signature" class="plano-card plano-signature-card">
+                            <span class="plano-destaque" aria-hidden="true"></span>
 
-                        <div class="beneficios">
-                            <p>2 cortes + 2 barbas</p>
-                            <p>Prioridade no agendamento</p>
-                        </div>
+                            <div class="plano-topo">
+                                <h2>SIGNATURE</h2>
+                                <span class="preco">R$ 129/mês</span>
+                            </div>
 
-                        <span class="botao-assinar">
-                            <span class="texto-assinar">ASSINAR</span>
-                            <span class="texto-selecionado">SELECIONADO</span>
-                        </span>
-                    </label>
+                            <div class="beneficios">
+                                <p>2 cortes + 2 barbas</p>
+                                <p>Prioridade no agendamento</p>
+                            </div>
 
-                    <label for="plano-black" class="plano-card">
-                        <div class="plano-topo">
-                            <h3>BLACK</h3>
-                            <span class="preco">R$ 179/mês</span>
-                        </div>
+                            <span class="botao-assinar">
+                                <span class="texto-assinar">ASSINAR</span>
+                                <span class="texto-selecionado">SELECIONADO</span>
+                            </span>
+                        </label>
+                    </li>
 
-                        <div class="beneficios">
-                            <p>4 serviços por mês</p>
-                            <p>Prioridade máxima</p>
-                        </div>
+                    <!-- Black -->
+                    <li>
+                        <label for="plano-black" class="plano-card">
+                            <div class="plano-topo">
+                                <h2>BLACK</h2>
+                                <span class="preco">R$ 179/mês</span>
+                            </div>
 
-                        <span class="botao-assinar">
-                            <span class="texto-assinar">ASSINAR</span>
-                            <span class="texto-selecionado">SELECIONADO</span>
-                        </span>
-                    </label>
+                            <div class="beneficios">
+                                <p>4 serviços por mês</p>
+                                <p>Prioridade máxima</p>
+                            </div>
 
-                </div>
-            </section>
-
+                            <span class="botao-assinar">
+                                <span class="texto-assinar">ASSINAR</span>
+                                <span class="texto-selecionado">SELECIONADO</span>
+                            </span>
+                        </label>
+                    </li>
+                </ul>
+            </fieldset>
         </div>
     </main>
-
 </body>
-
 </html>

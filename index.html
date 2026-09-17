@@ -22,9 +22,9 @@
     <header class="cabecalho">
         <a href="index.html" class="logo">PD BARBER</a>
 
-        <!-- Navegação principal -->
-        <nav class="navegacao-principal">
-            <a href="index.html" class="nav-item ativo">
+        <!-- Navegação desktop -->
+        <nav class="navegacao-principal" aria-label="Navegação principal">
+            <a href="index.html" class="nav-item ativo" aria-current="page">
                 <span>Início</span>
                 <span class="nav-indicador"></span>
             </a>
@@ -45,7 +45,24 @@
             </a>
         </nav>
 
-        <a href="#" class="botao botao-header">AGENDAR HORÁRIO</a>
+        <a href="assets/Pages/Profissionais.html" class="botao botao-header">AGENDAR HORÁRIO</a>
+
+        <!-- Navegação mobile -->
+        <details class="menu-mobile">
+            <summary class="menu-mobile-botao" aria-label="Abrir menu principal">
+                <span></span>
+                <span></span>
+                <span></span>
+            </summary>
+
+            <nav class="menu-mobile-conteudo" aria-label="Navegação mobile">
+                <a href="index.html" aria-current="page">Início</a>
+                <a href="assets/Pages/Servicos.html">Serviços</a>
+                <a href="assets/Pages/Sobre.html">Sobre</a>
+                <a href="assets/Pages/Planos.html">Planos</a>
+                <a href="assets/Pages/Profissionais.html" class="botao">AGENDAR HORÁRIO</a>
+            </nav>
+        </details>
     </header>
 
     <!-- Conteúdo principal -->
@@ -53,115 +70,135 @@
         <div class="conteudo">
 
             <!-- Hero -->
-            <section class="hero">
+            <section class="hero" aria-labelledby="titulo-principal">
                 <div class="hero-texto">
-                    <h1>CORTE, ESTILO<br>E PERSONALIDADE.</h1>
+                    <h1 id="titulo-principal">CORTE, ESTILO<br>E PERSONALIDADE.</h1>
                     <p>Uma experiência de barbearia feita para o seu estilo.</p>
-                    <a href="#" class="botao botao-hero">AGENDAR HORÁRIO</a>
+                    <a href="assets/Pages/Profissionais.html" class="botao botao-hero">AGENDAR HORÁRIO</a>
                 </div>
 
-                <div class="hero-imagem">
-                    <img src="assets/img/PDBarber.png" alt="Foto de destaque da barbearia">
-                </div>
+                <figure class="hero-imagem">
+                    <img src="assets/img/PDBarber.png" alt="Interior da barbearia PD Barber">
+                </figure>
             </section>
 
-            <div class="linha-dourada"></div>
+            <hr class="linha-dourada">
 
             <!-- Serviços -->
-            <section class="servicos">
-                <div class="titulo-secao">
-                    <span class="titulo-acento"></span>
-                    <h2>SERVIÇOS</h2>
-                </div>
-
-                <!-- Lista de serviços -->
-                <div class="lista-servicos">
-                    <article class="servico-card">
-                        <img class="servico-imagem" src="assets/img/ComboCompleto.png" alt="Combo completo de cabelo e barba">
-                        <div class="card-linha-dourada"></div>
-
-                        <div class="servico-informacoes">
-                            <div class="servico-topo">
-                                <h3>Combo Completo</h3>
-                                <span class="preco">R$ 70</span>
-                            </div>
-
-                            <p>Cabelo + barba em uma experiência completa.</p>
-                        </div>
-                    </article>
-
-                    <article class="servico-card">
-                        <img class="servico-imagem" src="assets/img/CorteClassico.png" alt="Corte clássico masculino">
-                        <div class="card-linha-dourada"></div>
-
-                        <div class="servico-informacoes">
-                            <div class="servico-topo">
-                                <h3>Corte Clássico</h3>
-                                <span class="preco">R$ 45</span>
-                            </div>
-
-                            <p>Corte personalizado e acabamento.</p>
-                        </div>
-                    </article>
-
-                    <article class="servico-card">
-                        <img class="servico-imagem" src="assets/img/BarbaPremium.png" alt="Serviço de barba premium">
-                        <div class="card-linha-dourada"></div>
-
-                        <div class="servico-informacoes">
-                            <div class="servico-topo">
-                                <h3>Barba Premium</h3>
-                                <span class="preco">R$ 35</span>
-                            </div>
-
-                            <p>Modelagem, toalha quente e acabamento.</p>
-                        </div>
-                    </article>
-                </div>
-            </section>
-
-            <!-- Destaques finais -->
-            <section class="destaques-finais">
-
-                <!-- Profissionais -->
-                <div class="profissionais-destaque">
+            <section class="servicos" aria-labelledby="titulo-servicos">
+                <header class="cabecalho-secao">
                     <div class="titulo-secao">
                         <span class="titulo-acento"></span>
-                        <h2>PROFISSIONAIS</h2>
+                        <h2 id="titulo-servicos">SERVIÇOS</h2>
                     </div>
 
-                    <div class="lista-profissionais">
-                        <article class="profissional-card">
-                            <img class="profissional-foto" src="assets/img/GabrielBarbeiro.png" alt="Barbeiro Gabriel">
-                            <h3>Gabriel</h3>
-                            <p>Especialista em cortes clássicos e degradê.</p>
+                    <p class="descricao-secao">Escolha o cuidado ideal para você.</p>
+                </header>
+
+                <ul class="lista-servicos">
+
+                    <li>
+                        <article class="servico-card">
+                            <img class="servico-imagem" src="assets/img/ComboCompleto.png" alt="Combo completo de cabelo e barba">
+
+                            <div class="card-linha-dourada"></div>
+
+                            <div class="servico-informacoes">
+                                <div class="servico-topo">
+                                    <h3>Combo Completo</h3>
+                                    <span class="preco">R$ 70</span>
+                                </div>
+
+                                <p>Cabelo + barba em uma experiência completa.</p>
+                            </div>
                         </article>
+                    </li>
 
-                        <article class="profissional-card">
-                            <img class="profissional-foto" src="assets/img/LucasBarbeiro.png" alt="Barbeiro Lucas">
-                            <h3>Lucas</h3>
-                            <p>Especialista em barba e visagismo.</p>
+                    <li>
+                        <article class="servico-card">
+                            <img class="servico-imagem" src="assets/img/CorteClassico.png" alt="Corte clássico masculino">
+
+                            <div class="card-linha-dourada"></div>
+
+                            <div class="servico-informacoes">
+                                <div class="servico-topo">
+                                    <h3>Corte Clássico</h3>
+                                    <span class="preco">R$ 45</span>
+                                </div>
+
+                                <p>Corte personalizado e acabamento.</p>
+                            </div>
                         </article>
+                    </li>
 
-                        <article class="profissional-card">
-                            <img class="profissional-foto" src="assets/img/AndréBarbeiro.png" alt="Barbeiro André">
-                            <h3>André</h3>
-                            <p>Especialista em cortes modernos.</p>
+                    <li>
+                        <article class="servico-card">
+                            <img class="servico-imagem" src="assets/img/BarbaPremium.png" alt="Serviço de barba premium">
+
+                            <div class="card-linha-dourada"></div>
+
+                            <div class="servico-informacoes">
+                                <div class="servico-topo">
+                                    <h3>Barba Premium</h3>
+                                    <span class="preco">R$ 35</span>
+                                </div>
+
+                                <p>Modelagem, toalha quente e acabamento.</p>
+                            </div>
                         </article>
-                    </div>
-                </div>
-
-                <!-- Planos -->
-                <aside class="chamada-planos">
-                    <h2>PLANOS PARA QUEM<br>CUIDA DO VISUAL</h2>
-                    <p>Escolha um plano e mantenha seu estilo sempre em dia.</p>
-                    <a href="planos.html" class="botao botao-planos">VER PLANOS</a>
-                </aside>
-
+                    </li>
+                </ul>
             </section>
 
+            <!-- Destaques -->
+            <section class="destaques-finais" aria-label="Profissionais e planos">
+
+                <!-- Profissionais -->
+                <section class="profissionais-destaque" aria-labelledby="titulo-profissionais">
+                    <div class="titulo-secao">
+                        <span class="titulo-acento"></span>
+                        <h2 id="titulo-profissionais">PROFISSIONAIS</h2>
+                    </div>
+
+                    <ul class="lista-profissionais">
+
+                        <li>
+                            <article class="profissional-card">
+                                <img class="profissional-foto" src="assets/img/GabrielBarbeiro.png" alt="Barbeiro Gabriel">
+                                <h3>Gabriel</h3>
+                                <p>Especialista em cortes clássicos e degradê.</p>
+                            </article>
+                        </li>
+
+                        <li>
+                            <article class="profissional-card">
+                                <img class="profissional-foto" src="assets/img/LucasBarbeiro.png" alt="Barbeiro Lucas">
+                                <h3>Lucas</h3>
+                                <p>Especialista em barba e visagismo.</p>
+                            </article>
+                        </li>
+
+                        <li>
+                            <article class="profissional-card">
+                                <img class="profissional-foto" src="assets/img/AndréBarbeiro.png" alt="Barbeiro André">
+                                <h3>André</h3>
+                                <p>Especialista em cortes modernos.</p>
+                            </article>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Planos -->
+                <aside class="chamada-planos" aria-labelledby="titulo-planos">
+                    <div>
+                        <h2 id="titulo-planos">PLANOS PARA QUEM<br>CUIDA DO VISUAL</h2>
+                        <p>Escolha um plano e mantenha seu estilo sempre em dia.</p>
+                    </div>
+
+                    <a href="assets/Pages/Planos.html" class="botao botao-planos">VER PLANOS</a>
+                </aside>
+            </section>
         </div>
     </main>
-
 </body>
 </html>
