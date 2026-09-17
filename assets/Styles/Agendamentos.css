@@ -1,0 +1,833 @@
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-fundo: #1f1f1f;
+    --cor-dourada: #c89b5b;
+    --cor-texto-claro: #f0f0f0;
+    --cor-texto-secundario: #c3c3c3;
+    --cor-texto-escuro: #171717;
+    --cor-card: #ffffff;
+    --cor-borda: #d8d2c8;
+    --fonte-titulo: "Oswald", sans-serif;
+    --fonte-texto: "Inter", sans-serif;
+    --largura-conteudo: 83.33%;
+    --raio-menor: 0.625rem;
+    --raio-card: 1rem;
+    --raio-maior: 1.125rem;
+}
+
+html {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-claro);
+    font-family: var(--fonte-texto);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+textarea {
+    font-family: inherit;
+}
+
+
+/* ==================================================
+   CABEÇALHO
+================================================== */
+
+.cabecalho {
+    width: 100%;
+    min-height: clamp(4rem, 5.6vw, 5rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(1rem, 2vw, 2rem);
+    padding-inline: 8.33%;
+    background-color: var(--cor-fundo);
+}
+
+.logo {
+    flex: 0 1 13%;
+    font-family: var(--fonte-titulo);
+    font-size: clamp(1.2rem, 1.7vw, 1.5rem);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.navegacao-principal {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(0.25rem, 1vw, 1rem);
+}
+
+.nav-item {
+    min-width: clamp(4.5rem, 7vw, 7rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    padding: 0.5em 0.75em;
+    border-radius: 0.5rem;
+    font-size: clamp(0.75rem, 1vw, 0.875rem);
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-indicador {
+    width: 45%;
+    height: 0.125rem;
+    display: block;
+    background-color: transparent;
+    border-radius: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+.nav-item:hover,
+.nav-item.ativo {
+    color: var(--cor-dourada);
+}
+
+.nav-item:hover .nav-indicador,
+.nav-item.ativo .nav-indicador {
+    background-color: var(--cor-dourada);
+}
+
+
+/* ==================================================
+   BOTÕES
+================================================== */
+
+.botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.9em 1.5em;
+    background-color: var(--cor-dourada);
+    color: var(--cor-texto-escuro);
+    border-radius: var(--raio-menor);
+    font-size: clamp(0.72rem, 0.9vw, 0.8125rem);
+    font-weight: 500;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.botao:hover {
+    transform: translateY(-0.125rem);
+    filter: brightness(1.08);
+}
+
+.botao-header {
+    flex: 0 1 13%;
+}
+
+
+/* ==================================================
+   FLUXO DO AGENDAMENTO
+================================================== */
+
+.fluxo-agendamento {
+    width: 100%;
+}
+
+.profissional-target {
+    position: absolute;
+    width: 0.0625rem;
+    height: 0.0625rem;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.controle-tela {
+    position: absolute;
+    width: 0.0625rem;
+    height: 0.0625rem;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+/* ==================================================
+   PÁGINA
+================================================== */
+
+.pagina {
+    width: 100%;
+    justify-content: center;
+}
+
+.conteudo {
+    width: var(--largura-conteudo);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.5rem, 1.8vw, 1.625rem);
+    padding-block: clamp(2rem, 3vw, 2.625rem);
+}
+
+
+/* ==================================================
+   TROCA DE TELAS
+================================================== */
+
+.tela-agendamento {
+    display: flex;
+}
+
+.tela-confirmacao,
+.tela-sucesso {
+    display: none;
+}
+
+#etapa-confirmacao:checked ~ .tela-agendamento {
+    display: none;
+}
+
+#etapa-confirmacao:checked ~ .tela-confirmacao {
+    display: flex;
+    animation: entrada-tela 0.4s ease-out both;
+}
+
+#agendamento-concluido:checked ~ .tela-agendamento,
+#agendamento-concluido:checked ~ .tela-confirmacao {
+    display: none;
+}
+
+#agendamento-concluido:checked ~ .tela-sucesso {
+    display: flex;
+    animation: entrada-tela 0.45s ease-out both;
+}
+
+/* ==================================================
+   TÍTULOS
+================================================== */
+
+.titulo-secao {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: clamp(0.5rem, 1vw, 0.75rem);
+}
+
+.titulo-acento {
+    width: 0.3125rem;
+    height: 2.5rem;
+    display: block;
+    flex-shrink: 0;
+    background-color: var(--cor-dourada);
+    border-radius: 0.125rem;
+}
+
+.titulo-secao h1,
+.titulo-secao h2 {
+    font-family: var(--fonte-titulo);
+    font-size: clamp(1.75rem, 2.3vw, 2rem);
+    font-weight: 600;
+}
+
+.titulo-secao-menor h2 {
+    font-size: clamp(1.5rem, 2.1vw, 2rem);
+}
+
+
+/* ==================================================
+   INTRODUÇÃO
+================================================== */
+
+.introducao-agendamento {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.3rem, 0.5vw, 0.5rem);
+}
+
+.introducao-agendamento h2 {
+    font-family: var(--fonte-titulo);
+    font-size: clamp(1.8rem, 2.5vw, 2.125rem);
+    font-weight: 600;
+}
+
+.introducao-agendamento p {
+    font-size: clamp(0.8rem, 1vw, 0.9375rem);
+    color: var(--cor-texto-secundario);
+}
+
+
+/* ==================================================
+   COLUNAS DO AGENDAMENTO
+================================================== */
+
+.agendamento-colunas {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 58% 38%;
+    justify-content: space-between;
+    gap: 4%;
+}
+
+.data-horario {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.2rem, 2vw, 1.5rem);
+}
+
+
+/* ==================================================
+   INPUTS ESCONDIDOS
+================================================== */
+
+.opcao-input {
+    position: absolute;
+    width: 0.0625rem;
+    height: 0.0625rem;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+/* ==================================================
+   SERVIÇOS
+================================================== */
+
+.lista-servicos-agendamento {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(0.5rem, 1vw, 0.75rem);
+}
+
+.opcao-servico {
+    min-height: clamp(2.75rem, 4vw, 3.25rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75em 1em;
+    background-color: transparent;
+    color: var(--cor-texto-claro);
+    border: 0.0625rem solid var(--cor-borda);
+    border-radius: var(--raio-menor);
+    font-size: clamp(0.72rem, 0.9vw, 0.8125rem);
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.opcao-servico:hover {
+    transform: translateY(-0.125rem);
+    border-color: var(--cor-dourada);
+}
+
+.opcao-input:checked + .opcao-servico {
+    background-color: var(--cor-dourada);
+    color: var(--cor-texto-escuro);
+    border-color: var(--cor-dourada);
+}
+
+
+/* ==================================================
+   DIAS
+================================================== */
+
+.lista-dias {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: clamp(0.5rem, 1vw, 0.75rem);
+}
+
+.opcao-dia {
+    min-height: clamp(2.5rem, 3.5vw, 2.875rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75em 1em;
+    background-color: var(--cor-card);
+    color: var(--cor-texto-escuro);
+    border: 0.0625rem solid transparent;
+    border-radius: var(--raio-menor);
+    font-size: clamp(0.72rem, 0.9vw, 0.8125rem);
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.opcao-dia:hover {
+    transform: translateY(-0.125rem);
+    border-color: var(--cor-dourada);
+}
+
+.opcao-input:checked + .opcao-dia {
+    background-color: var(--cor-dourada);
+    color: var(--cor-texto-escuro);
+    border-color: var(--cor-dourada);
+}
+
+
+/* ==================================================
+   HORÁRIOS
+================================================== */
+
+.lista-horarios {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(0.5rem, 1vw, 0.75rem);
+}
+
+.opcao-horario {
+    min-height: clamp(2.5rem, 3.5vw, 2.75rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75em 1em;
+    background-color: transparent;
+    color: var(--cor-texto-claro);
+    border: 0.0625rem solid var(--cor-borda);
+    border-radius: var(--raio-menor);
+    font-size: clamp(0.72rem, 0.9vw, 0.8125rem);
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.opcao-horario:hover {
+    transform: translateY(-0.125rem);
+    border-color: var(--cor-dourada);
+}
+
+.opcao-input:checked + .opcao-horario {
+    background-color: var(--cor-dourada);
+    color: var(--cor-texto-escuro);
+    border-color: var(--cor-dourada);
+}
+
+
+/* ==================================================
+   COMENTÁRIOS
+================================================== */
+
+.comentarios-confirmacao {
+    width: 100%;
+    min-height: clamp(24rem, 43vw, 38.75rem);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: clamp(1rem, 1.4vw, 1.25rem);
+    padding: clamp(1rem, 1.5vw, 1.25rem);
+    border: 0.0625rem solid var(--cor-texto-secundario);
+    border-radius: var(--raio-maior);
+}
+
+.campo-comentarios {
+    width: 100%;
+    min-height: 9.375rem;
+    padding: 1rem;
+    resize: vertical;
+    background-color: var(--cor-card);
+    color: var(--cor-texto-escuro);
+    border: none;
+    outline: none;
+    border-radius: 0.75rem;
+    font-size: clamp(0.75rem, 0.9vw, 0.8125rem);
+    line-height: 1.5;
+}
+
+.campo-comentarios::placeholder {
+    color: #666666;
+}
+
+.campo-comentarios:focus {
+    outline: 0.125rem solid var(--cor-dourada);
+}
+
+.botao-agendar {
+    width: clamp(11rem, 15vw, 13.75rem);
+    margin-top: auto;
+    opacity: 0.45;
+    pointer-events: none;
+}
+
+.fluxo-agendamento:has(input[name="servico"]:checked) .botao-agendar {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+/* ==================================================
+   CONFIRMAÇÃO
+================================================== */
+
+.resumo-agendamento {
+    width: 100%;
+    max-width: 52rem;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.75rem, 1.4vw, 1.25rem);
+    padding: clamp(1.5rem, 2.5vw, 2.25rem);
+    border-radius: var(--raio-maior);
+}
+
+.resumo-item {
+    width: 100%;
+    min-height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(1rem, 2vw, 2rem);
+    padding: 0.9rem 1rem;
+    border: 0.0625rem solid var(--cor-card);
+    border-radius: var(--raio-menor);
+}
+
+.resumo-label {
+    font-size: clamp(0.72rem, 0.9vw, 0.8125rem);
+    font-weight: 500;
+    color: var(--cor-texto-claro);
+}
+
+.resumo-valor {
+    font-family: var(--fonte-titulo);
+    font-size: clamp(1rem, 1.4vw, 1.125rem);
+    font-weight: 600;
+    color: var(--cor-dourada);
+    text-align: right;
+}
+
+.mensagem-confirmacao {
+    width: 100%;
+    padding-top: clamp(0.5rem, 1vw, 0.75rem);
+    font-size: clamp(0.75rem, 1vw, 0.875rem);
+    color: var(--cor-texto-claro);
+}
+
+
+/* ==================================================
+   VALORES DINÂMICOS DO RESUMO
+================================================== */
+
+.valor-profissional,
+.valor-servico,
+.valor-dia,
+.valor-horario {
+    display: none;
+}
+
+.profissional-nao-informado {
+    display: inline;
+}
+
+
+/* ==================================================
+   PROFISSIONAL VINDO DA URL
+================================================== */
+
+.fluxo-agendamento:has(#gabriel:target) .profissional-nao-informado,
+.fluxo-agendamento:has(#lucas:target) .profissional-nao-informado,
+.fluxo-agendamento:has(#andre:target) .profissional-nao-informado,
+.fluxo-agendamento:has(#bruna:target) .profissional-nao-informado,
+.fluxo-agendamento:has(#aline:target) .profissional-nao-informado,
+.fluxo-agendamento:has(#flavia:target) .profissional-nao-informado {
+    display: none;
+}
+
+.fluxo-agendamento:has(#gabriel:target) .profissional-gabriel {
+    display: inline;
+}
+
+.fluxo-agendamento:has(#lucas:target) .profissional-lucas {
+    display: inline;
+}
+
+.fluxo-agendamento:has(#andre:target) .profissional-andre {
+    display: inline;
+}
+
+.fluxo-agendamento:has(#bruna:target) .profissional-bruna {
+    display: inline;
+}
+
+.fluxo-agendamento:has(#aline:target) .profissional-aline {
+    display: inline;
+}
+
+.fluxo-agendamento:has(#flavia:target) .profissional-flavia {
+    display: inline;
+}
+
+
+/* ==================================================
+   SERVIÇO SELECIONADO
+================================================== */
+
+.valor-servico {
+    display: none;
+}
+
+.fluxo-agendamento:has(#servico-corte-classico:checked) .valor-corte-classico {
+    display: inline;
+}
+
+.fluxo-agendamento:has(#servico-barba-premium:checked) .valor-barba-premium {
+    display: inline;
+}
+
+.fluxo-agendamento:has(#servico-combo-completo:checked) .valor-combo-completo {
+    display: inline;
+}
+
+.fluxo-agendamento:has(#servico-acabamento:checked) .valor-acabamento {
+    display: inline;
+}
+
+
+/* ==================================================
+   DIA SELECIONADO
+================================================== */
+
+.fluxo-agendamento:has(#dia-seg-12:checked) .valor-seg-12 {
+    display: inline;
+}
+
+.fluxo-agendamento:has(#dia-ter-13:checked) .valor-ter-13 {
+    display: inline;
+}
+
+.fluxo-agendamento:has(#dia-qua-14:checked) .valor-qua-14 {
+    display: inline;
+}
+
+.fluxo-agendamento:has(#dia-qui-15:checked) .valor-qui-15 {
+    display: inline;
+}
+
+.fluxo-agendamento:has(#dia-sex-16:checked) .valor-sex-16 {
+    display: inline;
+}
+
+.fluxo-agendamento:has(#dia-sab-17:checked) .valor-sab-17 {
+    display: inline;
+}
+
+
+/* ==================================================
+   HORÁRIO SELECIONADO
+================================================== */
+
+.fluxo-agendamento:has(#hora-0900:checked) .valor-0900 {
+    display: inline;
+}
+
+.fluxo-agendamento:has(#hora-1030:checked) .valor-1030 {
+    display: inline;
+}
+
+.fluxo-agendamento:has(#hora-1300:checked) .valor-1300 {
+    display: inline;
+}
+
+.fluxo-agendamento:has(#hora-1430:checked) .valor-1430 {
+    display: inline;
+}
+
+.fluxo-agendamento:has(#hora-1700:checked) .valor-1700 {
+    display: inline;
+}
+
+.fluxo-agendamento:has(#hora-1830:checked) .valor-1830 {
+    display: inline;
+}
+
+
+/* ==================================================
+   AÇÕES DA CONFIRMAÇÃO
+================================================== */
+
+.acoes-confirmacao {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(0.75rem, 1.5vw, 1.125rem);
+}
+
+.botao-confirmar {
+    min-width: clamp(13rem, 20vw, 17.5rem);
+}
+
+.botao-alterar {
+    min-width: clamp(13rem, 18vw, 15.625rem);
+    background-color: transparent;
+    color: var(--cor-texto-claro);
+    border: 0.0625rem solid var(--cor-dourada);
+}
+
+.botao-alterar:hover {
+    background-color: var(--cor-dourada);
+    color: var(--cor-texto-escuro);
+}
+
+.aviso-confirmacao {
+    width: 100%;
+    text-align: center;
+    font-size: clamp(0.7rem, 0.85vw, 0.75rem);
+    color: var(--cor-texto-secundario);
+}
+
+/* ==================================================
+   SUCESSO
+================================================== */
+
+.tela-sucesso {
+    min-height: calc(100vh - 5rem);
+    align-items: center;
+    justify-content: center;
+}
+
+.conteudo-sucesso {
+    width: min(90%, 34rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(1rem, 1.5vw, 1.25rem);
+    padding: clamp(2rem, 4vw, 3.5rem);
+    border: 0.0625rem solid var(--cor-dourada);
+    border-radius: var(--raio-maior);
+    text-align: center;
+}
+
+.icone-sucesso {
+    width: clamp(4rem, 6vw, 5rem);
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor-dourada);
+    color: var(--cor-texto-escuro);
+    border-radius: 50%;
+    font-size: clamp(2rem, 3vw, 2.75rem);
+    font-weight: 600;
+    animation: entrada-check 0.5s ease-out 0.15s both;
+}
+
+.texto-sucesso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.texto-sucesso h1 {
+    font-family: var(--fonte-titulo);
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 600;
+}
+
+.texto-sucesso p {
+    font-size: clamp(0.85rem, 1vw, 1rem);
+    color: var(--cor-texto-claro);
+}
+
+.texto-sucesso span {
+    font-size: clamp(0.75rem, 0.9vw, 0.875rem);
+    color: var(--cor-texto-secundario);
+}
+
+.botao-inicio {
+    min-width: clamp(11rem, 16vw, 13rem);
+    margin-top: 0.5rem;
+}
+
+
+/* ==================================================
+   ANIMAÇÕES
+================================================== */
+
+@keyframes entrada-tela {
+    from {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes entrada-check {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* ==================================================
+   ANIMAÇÃO DA CONFIRMAÇÃO
+================================================== */
+
+@keyframes entrada-confirmacao {
+    from {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#etapa-confirmacao:checked ~ .tela-confirmacao .titulo-secao {
+    animation: entrada-item 0.45s ease-out 0.05s both;
+}
+
+#etapa-confirmacao:checked ~ .tela-confirmacao .resumo-agendamento {
+    animation: entrada-item 0.5s ease-out 0.12s both;
+}
+
+#etapa-confirmacao:checked ~ .tela-confirmacao .acoes-confirmacao {
+    animation: entrada-item 0.5s ease-out 0.2s both;
+}
+
+@keyframes entrada-item {
+    from {
+        opacity: 0;
+        transform: translateY(0.75rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
