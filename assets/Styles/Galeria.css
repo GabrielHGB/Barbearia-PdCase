@@ -11,10 +11,8 @@
     --cor-texto-secundario: #c3c3c3;
     --cor-texto-escuro: #171717;
     --cor-card: #ffffff;
-
     --fonte-titulo: "Oswald", sans-serif;
     --fonte-texto: "Inter", sans-serif;
-
     --largura-conteudo: 83.33%;
     --raio-menor: 0.625rem;
     --raio-card: 1rem;
@@ -29,10 +27,8 @@ html {
 body {
     width: 100%;
     min-height: 100vh;
-
     background-color: var(--cor-fundo);
     color: var(--cor-texto-claro);
-
     font-family: var(--fonte-texto);
 }
 
@@ -54,68 +50,50 @@ img {
 .cabecalho {
     width: 100%;
     min-height: clamp(4rem, 5.6vw, 5rem);
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     gap: clamp(1rem, 2vw, 2rem);
-
     padding-inline: 8.33%;
-
     background-color: var(--cor-fundo);
 }
 
 .logo {
     flex: 0 1 13%;
-
     font-family: var(--fonte-titulo);
     font-size: clamp(1.2rem, 1.7vw, 1.5rem);
     font-weight: 600;
-
     white-space: nowrap;
 }
 
 .navegacao-principal {
     flex: 1;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     gap: clamp(0.25rem, 1vw, 1rem);
 }
 
 .nav-item {
     min-width: clamp(4.5rem, 7vw, 7rem);
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     gap: 0.25rem;
-
     padding: 0.5em 0.75em;
-
     border-radius: 0.5rem;
-
     font-size: clamp(0.75rem, 1vw, 0.875rem);
     font-weight: 500;
-
     transition: color 0.2s ease;
 }
 
 .nav-indicador {
     width: 45%;
     height: 0.125rem;
-
     display: block;
-
     background-color: transparent;
-
     border-radius: 1rem;
-
     transition: background-color 0.2s ease;
 }
 
@@ -138,22 +116,14 @@ img {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     padding: 0.9em 1.5em;
-
     background-color: var(--cor-dourada);
     color: var(--cor-texto-escuro);
-
     border-radius: var(--raio-menor);
-
     font-size: clamp(0.72rem, 0.9vw, 0.8125rem);
     font-weight: 500;
-
     white-space: nowrap;
-
-    transition:
-        transform 0.2s ease,
-        filter 0.2s ease;
+    transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 .botao:hover {
@@ -168,7 +138,6 @@ img {
 .botao-agendar {
     width: fit-content;
     min-width: 14.375rem;
-
     align-self: flex-start;
 }
 
@@ -202,6 +171,7 @@ img {
 
 .galeria-profissional:target {
     display: flex;
+    animation: entrada-galeria 0.5s ease-out both;
 }
 
 
@@ -211,22 +181,17 @@ img {
 
 .titulo-secao {
     width: 100%;
-
     display: flex;
     align-items: center;
-
     gap: clamp(0.5rem, 1vw, 0.75rem);
 }
 
 .titulo-acento {
     width: 0.3125rem;
     height: 2.5rem;
-
     display: block;
     flex-shrink: 0;
-
     background-color: var(--cor-dourada);
-
     border-radius: 0.125rem;
 }
 
@@ -243,59 +208,114 @@ img {
 
 .profissional-destaque {
     width: 100%;
-
     display: flex;
     align-items: center;
     justify-content: flex-start;
-
-    gap: clamp(2rem, 3vw, 2.5rem);
-}
-
-.profissional-card {
-    width: 22.5%;
-    max-width: 16.875rem;
-    min-height: 20vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: clamp(0.4rem, 0.6vw, 0.5rem);
-    padding: clamp(1rem, 1.25vw, 1.125rem);
-    border-radius: var(--raio-card);
+    gap: clamp(1.5rem, 3vw, 3rem);
 }
 
 .profissional-foto {
-    width: 87.5%;
+    width: clamp(9rem, 16vw, 13rem);
     aspect-ratio: 1 / 1;
+    flex-shrink: 0;
     object-fit: cover;
     object-position: center 20%;
     border: 0.0625rem solid var(--cor-dourada);
     border-radius: 50%;
 }
 
-.profissional-card h2 {
-    font-family: var(--fonte-titulo);
-    font-size: clamp(1rem, 1.3vw, 1.1875rem);
-    font-weight: 600;
-    color: var(--cor-texto-claro);
+.profissional-informacoes {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: clamp(0.35rem, 0.7vw, 0.625rem);
 }
 
-.profissional-card p {
-    width: 90%;
-    max-width: 14.375rem;
-
-    font-size: clamp(0.65rem, 0.75vw, 0.6875rem);
-    line-height: 1.45;
-
-    text-align: center;
-
+.nome-profissional {
+    font-family: var(--fonte-titulo);
+    font-size: clamp(2rem, 3vw, 2.75rem);
+    font-weight: 600;
     color: var(--cor-texto-claro);
+    line-height: 1;
+}
+
+.descricao-profissional {
+    max-width: 30rem;
+    font-size: clamp(0.8rem, 1vw, 0.95rem);
+    line-height: 1.5;
+    color: var(--cor-texto-secundario);
 }
 
 .titulo-trabalhos {
+    margin-top: clamp(0.75rem, 1.5vw, 1.25rem);
     font-family: var(--fonte-titulo);
-    font-size: clamp(2rem, 2.5vw, 2.25rem);
+    font-size: clamp(1.7rem, 2.5vw, 2.25rem);
     font-weight: 600;
+    color: var(--cor-texto-claro);
+}
+
+
+/* ==================================================
+   ANIMAÇÕES DO PROFISSIONAL
+================================================== */
+
+.galeria-profissional:target .profissional-foto {
+    animation: entrada-foto 0.6s ease-out both;
+}
+
+.galeria-profissional:target .nome-profissional {
+    animation: entrada-nome 0.65s ease-out 0.1s both;
+}
+
+.galeria-profissional:target .descricao-profissional {
+    animation: entrada-informacao 0.65s ease-out 0.2s both;
+}
+
+.galeria-profissional:target .titulo-trabalhos {
+    animation: entrada-informacao 0.65s ease-out 0.3s both;
+}
+
+@keyframes entrada-galeria {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes entrada-foto {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes entrada-nome {
+    from {
+        opacity: 0;
+        transform: translateX(-2rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes entrada-informacao {
+    from {
+        opacity: 0;
+        transform: translateX(-1.25rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 
@@ -305,10 +325,8 @@ img {
 
 .grade-imagens {
     width: 100%;
-
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-
     gap: clamp(1rem, 1.4vw, 1.25rem);
 }
 
@@ -319,12 +337,46 @@ img {
 .imagem-destaque,
 .imagens-secundarias img {
     width: 100%;
-
     height: clamp(11rem, 16vw, 14rem);
     max-height: 14rem;
-
     object-fit: cover;
     object-position: center;
-
     border-radius: var(--raio-maior);
 }
+
+
+/* ==================================================
+   ANIMAÇÃO DA GALERIA
+================================================== */
+
+.galeria-profissional:target .grade-imagens {
+    animation: entrada-imagens 0.7s ease-out 0.35s both;
+}
+
+.galeria-profissional:target .botao-agendar {
+    animation: entrada-botao 0.7s ease-out 0.45s both;
+}
+
+@keyframes entrada-imagens {
+    from {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes entrada-botao {
+    from {
+        opacity: 0;
+        transform: translateY(0.75rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
