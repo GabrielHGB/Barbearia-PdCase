@@ -19,9 +19,9 @@
     --fonte-titulo: "Oswald", sans-serif;
     --fonte-texto: "Inter", sans-serif;
     --largura-conteudo: 83.33%;
-    --raio-menor: 0.625rem;
+    --raio-menor: 0.6rem;
     --raio-card: 1rem;
-    --raio-maior: 1.125rem;
+    --raio-maior: 1.1rem;
 }
 
 html {
@@ -51,30 +51,6 @@ button,
 input,
 textarea {
     font: inherit;
-}
-
-
-/* ==================================================
-   ACESSIBILIDADE
-================================================== */
-
-.sr-only {
-    width: 0.0625rem;
-    height: 0.0625rem;
-    padding: 0;
-    margin: -0.0625rem;
-    position: absolute;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-}
-
-a:focus-visible,
-label:focus-visible,
-textarea:focus-visible {
-    outline: 0.125rem solid var(--cor-dourada);
-    outline-offset: 0.25rem;
 }
 
 
@@ -120,19 +96,19 @@ textarea:focus-visible {
     gap: 0.25rem;
     padding: 0.5rem 0.75rem;
     border-radius: 0.5rem;
-    font-size: 0.875rem;
+    font-size: 0.9rem;
     font-weight: 500;
     transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .nav-item:hover {
     color: var(--cor-dourada);
-    transform: translateY(-0.125rem);
+    transform: translateY(-0.12rem);
 }
 
 .nav-indicador {
     width: 45%;
-    height: 0.125rem;
+    height: 0.12rem;
     display: block;
     background-color: transparent;
     border-radius: 1rem;
@@ -163,11 +139,11 @@ textarea:focus-visible {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0.875rem 1.5rem;
+    padding: 0.9rem 1.5rem;
     background-color: var(--cor-dourada);
     color: var(--cor-texto-escuro);
     border-radius: var(--raio-menor);
-    font-size: 0.8125rem;
+    font-size: 0.8rem;
     font-weight: 500;
     white-space: nowrap;
     cursor: pointer;
@@ -175,7 +151,7 @@ textarea:focus-visible {
 }
 
 .botao:hover {
-    transform: translateY(-0.1875rem);
+    transform: translateY(-0.19rem);
     filter: brightness(1.08);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
 }
@@ -203,8 +179,8 @@ textarea:focus-visible {
 .controle-tela,
 .opcao-input {
     position: absolute;
-    width: 0.0625rem;
-    height: 0.0625rem;
+    width: 0.06rem;
+    height: 0.06rem;
     opacity: 0;
     pointer-events: none;
 }
@@ -258,7 +234,7 @@ textarea:focus-visible {
     max-width: 75rem;
     display: flex;
     flex-direction: column;
-    gap: 1.625rem;
+    gap: 1.6rem;
     margin-inline: auto;
     padding-block: 2.5rem 3rem;
 }
@@ -276,12 +252,12 @@ textarea:focus-visible {
 }
 
 .titulo-acento {
-    width: 0.3125rem;
+    width: 0.3rem;
     height: 2.5rem;
     display: block;
     flex-shrink: 0;
     background-color: var(--cor-dourada);
-    border-radius: 0.125rem;
+    border-radius: 0.12rem;
 }
 
 .titulo-secao h1,
@@ -319,12 +295,12 @@ textarea:focus-visible {
 
 .introducao-agendamento h2 {
     font-family: var(--fonte-titulo);
-    font-size: 2.125rem;
+    font-size: 2.1rem;
     font-weight: 600;
 }
 
 .introducao-agendamento p {
-    font-size: 0.9375rem;
+    font-size: 0.9rem;
     color: var(--cor-texto-secundario);
 }
 
@@ -352,7 +328,7 @@ textarea:focus-visible {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 0.875rem;
+    gap: 0.9rem;
     border: 0;
 }
 
@@ -376,9 +352,9 @@ textarea:focus-visible {
     padding: 0.75rem 1rem;
     background-color: transparent;
     color: var(--cor-texto-claro);
-    border: 0.0625rem solid var(--cor-borda);
+    border: 0.06rem solid var(--cor-borda);
     border-radius: var(--raio-menor);
-    font-size: 0.8125rem;
+    font-size: 0.8rem;
     font-weight: 500;
     text-align: center;
     cursor: pointer;
@@ -386,7 +362,7 @@ textarea:focus-visible {
 }
 
 .opcao-servico:hover {
-    transform: translateY(-0.125rem);
+    transform: translateY(-0.12rem);
     border-color: var(--cor-dourada);
 }
 
@@ -409,23 +385,23 @@ textarea:focus-visible {
 }
 
 .opcao-dia {
-    min-height: 2.875rem;
+    min-height: 2.9rem;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0.75rem 1rem;
     background-color: var(--cor-card);
     color: var(--cor-texto-escuro);
-    border: 0.0625rem solid transparent;
+    border: 0.06rem solid transparent;
     border-radius: var(--raio-menor);
-    font-size: 0.8125rem;
+    font-size: 0.8rem;
     font-weight: 500;
     cursor: pointer;
     transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .opcao-dia:hover {
-    transform: translateY(-0.125rem);
+    transform: translateY(-0.12rem);
     border-color: var(--cor-dourada);
 }
 
@@ -454,16 +430,16 @@ textarea:focus-visible {
     padding: 0.75rem 1rem;
     background-color: transparent;
     color: var(--cor-texto-claro);
-    border: 0.0625rem solid var(--cor-borda);
+    border: 0.06rem solid var(--cor-borda);
     border-radius: var(--raio-menor);
-    font-size: 0.8125rem;
+    font-size: 0.8rem;
     font-weight: 500;
     cursor: pointer;
     transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .opcao-horario:hover {
-    transform: translateY(-0.125rem);
+    transform: translateY(-0.12rem);
     border-color: var(--cor-dourada);
 }
 
@@ -486,13 +462,13 @@ textarea:focus-visible {
     align-items: flex-start;
     gap: 1.25rem;
     padding: 1.25rem;
-    border: 0.0625rem solid var(--cor-texto-secundario);
+    border: 0.06rem solid var(--cor-texto-secundario);
     border-radius: var(--raio-maior);
 }
 
 .campo-comentarios {
     width: 100%;
-    min-height: 9.375rem;
+    min-height: 9.4rem;
     padding: 1rem;
     resize: vertical;
     background-color: var(--cor-card);
@@ -500,7 +476,7 @@ textarea:focus-visible {
     border: 0;
     outline: 0;
     border-radius: 0.75rem;
-    font-size: 0.8125rem;
+    font-size: 0.8rem;
     line-height: 1.5;
 }
 
@@ -509,7 +485,7 @@ textarea:focus-visible {
 }
 
 .campo-comentarios:focus {
-    outline: 0.125rem solid var(--cor-dourada);
+    outline: 0.12rem solid var(--cor-dourada);
 }
 
 .botao-agendar {
@@ -541,7 +517,7 @@ textarea:focus-visible {
 }
 
 .cabecalho-confirmacao > p {
-    font-size: 0.9375rem;
+    font-size: 0.9rem;
     color: var(--cor-texto-secundario);
 }
 
@@ -565,7 +541,7 @@ textarea:focus-visible {
     display: flex;
     align-items: center;
     padding: 0 1.25rem;
-    border: 0.125rem solid var(--cor-card);
+    border: 0.12rem solid var(--cor-card);
     border-radius: var(--raio-menor);
 }
 
@@ -586,7 +562,7 @@ textarea:focus-visible {
 
 .valor-principal {
     font-family: var(--fonte-titulo);
-    font-size: 1.625rem;
+    font-size: 1.6rem;
     font-weight: 600;
     color: var(--cor-texto-claro);
 }
@@ -678,7 +654,7 @@ textarea:focus-visible {
 }
 
 .mensagem-confirmacao {
-    font-size: 0.8125rem;
+    font-size: 0.8rem;
     text-align: center;
     color: var(--cor-texto-secundario);
 }
@@ -687,7 +663,7 @@ textarea:focus-visible {
     width: 100%;
     display: flex;
     justify-content: center;
-    gap: 1.125rem;
+    gap: 1.1rem;
 }
 
 .botao-confirmar,
@@ -698,7 +674,7 @@ textarea:focus-visible {
 .botao-alterar {
     background-color: transparent;
     color: var(--cor-texto-claro);
-    border: 0.0625rem solid var(--cor-dourada);
+    border: 0.06rem solid var(--cor-dourada);
 }
 
 .botao-alterar:hover {
@@ -731,7 +707,7 @@ textarea:focus-visible {
     align-items: center;
     gap: 1.25rem;
     padding: 3rem;
-    border: 0.0625rem solid var(--cor-dourada);
+    border: 0.06rem solid var(--cor-dourada);
     border-radius: var(--raio-maior);
     text-align: center;
 }
@@ -768,7 +744,7 @@ textarea:focus-visible {
 }
 
 .texto-sucesso span {
-    font-size: 0.875rem;
+    font-size: 0.9rem;
     color: var(--cor-texto-secundario);
 }
 
@@ -844,7 +820,7 @@ textarea:focus-visible {
    TABLET
 ================================================== */
 
-@media (max-width: 64rem) {
+@media (max-width: 1024px) {
 
     .cabecalho {
         padding-inline: 5%;
@@ -878,7 +854,7 @@ textarea:focus-visible {
    MOBILE
 ================================================== */
 
-@media (max-width: 48rem) {
+@media (max-width: 768px) {
 
     .cabecalho {
         width: 100%;
@@ -901,15 +877,15 @@ textarea:focus-visible {
         justify-content: center;
         position: absolute;
         left: 1rem;
-        font-size: 1.375rem;
+        font-size: 1.4rem;
         font-weight: 500;
         cursor: pointer;
-        border-radius: 0.625rem;
+        border-radius: 0.6rem;
     }
 
     .cabecalho-mobile-titulo {
         font-family: var(--fonte-titulo);
-        font-size: 1.125rem;
+        font-size: 1.1rem;
         font-weight: 600;
     }
 
@@ -956,8 +932,8 @@ textarea:focus-visible {
         width: 100%;
         max-width: none;
         min-height: 100%;
-        gap: 1.125rem;
-        padding: 0.875rem 1.25rem 1rem;
+        gap: 1.1rem;
+        padding: 0.9rem 1.25rem 1rem;
     }
 
 
@@ -980,7 +956,7 @@ textarea:focus-visible {
     .titulo-secao h2,
     .titulo-secao-menor h2 {
         font-size: 1.25rem;
-        line-height: 1.6875rem;
+        line-height: 1.7rem;
     }
 
     .introducao-agendamento {
@@ -1007,22 +983,22 @@ textarea:focus-visible {
     }
 
     .data-horario {
-        gap: 1.125rem;
+        gap: 1.1rem;
     }
 
     .grupo-agendamento {
-        gap: 0.625rem;
+        gap: 0.6rem;
     }
 
     .lista-servicos-agendamento {
         grid-template-columns: repeat(2, 1fr);
-        gap: 0.625rem;
+        gap: 0.6rem;
     }
 
     .opcao-servico {
-        min-height: 2.375rem;
+        min-height: 2.4rem;
         padding: 0.5rem;
-        font-size: 0.6875rem;
+        font-size: 0.7rem;
     }
 
     .lista-dias {
@@ -1031,7 +1007,7 @@ textarea:focus-visible {
     }
 
     .opcao-dia {
-        min-height: 2.375rem;
+        min-height: 2.4rem;
         padding: 0.5rem;
         font-size: 0.75rem;
     }
@@ -1042,7 +1018,7 @@ textarea:focus-visible {
     }
 
     .opcao-horario {
-        min-height: 2.375rem;
+        min-height: 2.4rem;
         padding: 0.5rem;
         font-size: 0.75rem;
     }
@@ -1060,7 +1036,7 @@ textarea:focus-visible {
     .campo-comentarios {
         min-height: 5rem;
         padding: 0.75rem;
-        border: 0.0625rem solid var(--cor-borda);
+        border: 0.06rem solid var(--cor-borda);
         border-radius: 0.75rem;
         font-size: 0.75rem;
     }
@@ -1078,8 +1054,8 @@ textarea:focus-visible {
     .conteudo-confirmacao {
         width: 100%;
         max-width: none;
-        gap: 1.25rem;
-        padding-top: 1.25rem;
+        gap: 3rem;
+        padding-top: 0.5rem;
     }
 
     .cabecalho-confirmacao {
@@ -1099,27 +1075,26 @@ textarea:focus-visible {
 
     .verificacao-grupo {
         width: 100%;
-        min-height: 7.125rem;
         justify-content: space-between;
-        gap: 0.625rem;
+        gap: 0.4rem;
     }
 
     .verificacao-caixa {
         width: 100%;
-        min-height: 2.625rem;
+        min-height: 2.6rem;
         padding: 0 1.25rem;
-        border: 0.125rem solid var(--cor-card);
-        border-radius: 0.625rem;
+        border: 0.12rem solid var(--cor-card);
+        border-radius: 0.6rem;
     }
 
     .valor-principal {
-        font-size: 1.625rem;
-        line-height: 2.1875rem;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
     }
 
     .valor-destaque {
         font-size: 1.25rem;
-        line-height: 1.6875rem;
+        line-height: 1.7rem;
     }
 
     .rodape-confirmacao {
@@ -1151,8 +1126,8 @@ textarea:focus-visible {
     }
 
     .aviso-confirmacao {
-        font-size: 0.6875rem;
-        line-height: 0.9375rem;
+        font-size: 0.7rem;
+        line-height: 0.9rem;
     }
 
 
@@ -1177,7 +1152,7 @@ textarea:focus-visible {
     }
 
     .texto-sucesso p {
-        font-size: 0.8125rem;
+        font-size: 0.8rem;
     }
 
     .texto-sucesso span {
@@ -1195,7 +1170,7 @@ textarea:focus-visible {
    MOBILE PEQUENO
 ================================================== */
 
-@media (max-width: 23rem) {
+@media (max-width: 368px) {
 
     .conteudo {
         padding-inline: 1rem;
@@ -1206,11 +1181,11 @@ textarea:focus-visible {
     }
 
     .valor-principal {
-        font-size: 1.375rem;
+        font-size: 1.4rem;
     }
 
     .valor-destaque {
-        font-size: 1.0625rem;
+        font-size: 1.1rem;
     }
 }
 
@@ -1218,15 +1193,3 @@ textarea:focus-visible {
 /* ==================================================
    MOVIMENTO REDUZIDO
 ================================================== */
-
-@media (prefers-reduced-motion: reduce) {
-
-    *,
-    *::before,
-    *::after {
-        scroll-behavior: auto !important;
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
-}

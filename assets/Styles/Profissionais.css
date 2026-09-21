@@ -18,7 +18,7 @@
     --fonte-titulo: "Oswald", sans-serif;
     --fonte-texto: "Inter", sans-serif;
     --largura-conteudo: 83.33%;
-    --raio-menor: 0.625rem;
+    --raio-menor: 0.6rem;
     --raio-card: 1rem;
 }
 
@@ -52,16 +52,6 @@ img {
 
 ul {
     list-style: none;
-}
-
-
-/* ==================================================
-   ACESSIBILIDADE
-================================================== */
-
-a:focus-visible {
-    outline: 0.125rem solid var(--cor-dourada);
-    outline-offset: 0.25rem;
 }
 
 
@@ -107,14 +97,14 @@ a:focus-visible {
     gap: 0.25rem;
     padding: 0.5rem 0.75rem;
     border-radius: 0.5rem;
-    font-size: 0.875rem;
+    font-size: 0.9rem;
     font-weight: 500;
     transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .nav-item:hover {
     color: var(--cor-dourada);
-    transform: translateY(-0.125rem);
+    transform: translateY(-0.12rem);
 }
 
 .nav-item.ativo {
@@ -123,7 +113,7 @@ a:focus-visible {
 
 .nav-indicador {
     width: 45%;
-    height: 0.125rem;
+    height: 0.12rem;
     display: block;
     background-color: transparent;
     border-radius: 1rem;
@@ -155,18 +145,18 @@ a:focus-visible {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0.875rem 1.5rem;
+    padding: 0.9rem 1.5rem;
     background-color: var(--cor-dourada);
     color: var(--cor-texto-escuro);
     border-radius: var(--raio-menor);
-    font-size: 0.8125rem;
+    font-size: 0.8rem;
     font-weight: 500;
     white-space: nowrap;
     transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
 }
 
 .botao:hover {
-    transform: translateY(-0.1875rem);
+    transform: translateY(-0.19rem);
     filter: brightness(1.08);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
 }
@@ -212,16 +202,16 @@ a:focus-visible {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    animation: entrada-esquerda 0.5s ease-out both;
+    animation: entrada-esquerda 0.5s ease-out;
 }
 
 .titulo-acento {
-    width: 0.3125rem;
+    width: 0.3rem;
     height: 2.5rem;
     display: block;
     flex-shrink: 0;
     background-color: var(--cor-dourada);
-    border-radius: 0.125rem;
+    border-radius: 0.12rem;
 }
 
 .titulo-secao h1 {
@@ -245,13 +235,13 @@ a:focus-visible {
 
 .introducao-profissionais h2 {
     font-family: var(--fonte-titulo);
-    font-size: 2.125rem;
+    font-size: 2.1rem;
     font-weight: 600;
     line-height: 1.35;
 }
 
 .introducao-profissionais p {
-    font-size: 0.9375rem;
+    font-size: 0.9rem;
     line-height: 1.4;
     color: var(--cor-texto-secundario);
 }
@@ -265,7 +255,7 @@ a:focus-visible {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.875rem;
+    gap: 1.9rem;
 }
 
 .profissional-card {
@@ -274,7 +264,8 @@ a:focus-visible {
     overflow: hidden;
     background-color: var(--cor-card);
     border-radius: var(--raio-card);
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    border: 0.05rem solid var(--cor-dourada);
+    transition: 0.3s ease;
     animation: entrada-baixo 0.55s ease-out both;
 }
 
@@ -312,12 +303,12 @@ a:focus-visible {
 }
 
 .profissional-foto {
-    width: 70%;
+    width: 90%;
     max-width: 11rem;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     object-position: center 20%;
-    border: 0.0625rem solid var(--cor-dourada);
+    border: 0.06rem solid var(--cor-dourada);
     border-radius: 50%;
     transition: transform 0.3s ease;
 }
@@ -336,15 +327,15 @@ a:focus-visible {
 
 .profissional-informacoes h3 {
     font-family: var(--fonte-titulo);
-    font-size: 1.1875rem;
+    font-size: 2rem;
     font-weight: 600;
     color: var(--cor-texto-escuro);
 }
 
 .profissional-informacoes p {
     width: 90%;
-    max-width: 14.375rem;
-    font-size: 0.6875rem;
+    max-width: 14.4rem;
+    font-size: 1rem;
     line-height: 1.45;
     text-align: center;
     color: var(--cor-texto-escuro);
@@ -386,7 +377,7 @@ a:focus-visible {
    TABLET
 ================================================== */
 
-@media (max-width: 64rem) {
+@media (max-width: 1024px) {
 
     .cabecalho {
         padding-inline: 5%;
@@ -419,7 +410,7 @@ a:focus-visible {
    MOBILE
 ================================================== */
 
-@media (max-width: 48rem) {
+@media (max-width: 768px) {
 
     .cabecalho {
         height: 3.75rem;
@@ -445,19 +436,19 @@ a:focus-visible {
         font-size: 2rem;
         font-weight: 500;
         line-height: 1;
-        border-radius: 0.625rem;
+        border-radius: 0.6rem;
         transition: background-color 0.2s ease, transform 0.2s ease;
     }
 
     .cabecalho-mobile-voltar:hover {
         background-color: rgba(255, 255, 255, 0.06);
-        transform: translateX(-0.125rem);
+        transform: translateX(-0.12rem);
     }
 
     .cabecalho-mobile-titulo {
         display: block;
         font-family: var(--fonte-titulo);
-        font-size: 1.125rem;
+        font-size: 1.1rem;
         font-weight: 600;
     }
 
@@ -477,7 +468,7 @@ a:focus-visible {
         min-height: 100%;
         flex: 1;
         gap: 1rem;
-        padding: 0.875rem 1.25rem 1.125rem;
+        padding: 0.9rem 1.25rem 1.1rem;
     }
 
 
@@ -498,7 +489,7 @@ a:focus-visible {
 
     .titulo-secao h1 {
         font-size: 1.25rem;
-        line-height: 1.6875rem;
+        line-height: 1.7rem;
     }
 
 
@@ -531,11 +522,11 @@ a:focus-visible {
     .profissional-card {
         height: 7rem;
         min-height: 7rem;
-        border-radius: 0.875rem;
+        border-radius: 0.9rem;
     }
 
     .profissional-card:hover {
-        transform: translateY(-0.125rem);
+        transform: translateY(-0.12rem);
         background-color: var(--cor-card);
         box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
     }
@@ -553,7 +544,7 @@ a:focus-visible {
         column-gap: 1rem;
         row-gap: 0.25rem;
         align-items: center;
-        padding: 0.875rem;
+        padding: 0.9rem;
     }
 
     .profissional-foto {
@@ -561,7 +552,7 @@ a:focus-visible {
         height: 5rem;
         max-width: none;
         grid-area: foto;
-        border-width: 0.0625rem;
+        border-width: 0.06rem;
     }
 
     .profissional-card:hover .profissional-foto {
@@ -575,29 +566,29 @@ a:focus-visible {
     }
 
     .profissional-informacoes h3 {
-        font-size: 1.0625rem;
-        line-height: 1.4375rem;
+        font-size: 1.1rem;
+        line-height: 1.4rem;
     }
 
     .profissional-informacoes p {
         width: 100%;
         max-width: none;
-        font-size: 0.6875rem;
-        line-height: 0.9375rem;
+        font-size: 0.7rem;
+        line-height: 0.9rem;
         text-align: left;
         color: #777777;
     }
 
     .profissional-acao {
         width: 7rem;
-        height: 1.625rem;
+        height: 1.6rem;
         grid-area: acao;
         justify-self: end;
         display: inline-flex;
         align-items: center;
         justify-content: center;
         color: var(--cor-texto-escuro);
-        border: 0.0625rem solid var(--cor-dourada);
+        border: 0.06rem solid var(--cor-dourada);
         border-radius: var(--raio-menor);
         font-size: 0.75rem;
         font-weight: 500;
@@ -614,7 +605,7 @@ a:focus-visible {
    MOBILE PEQUENO
 ================================================== */
 
-@media (max-width: 23rem) {
+@media (max-width: 368px) {
 
     .conteudo {
         padding-inline: 1rem;
@@ -633,6 +624,6 @@ a:focus-visible {
 
     .profissional-acao {
         width: 6.5rem;
-        font-size: 0.6875rem;
+        font-size: 0.7rem;
     }
 }

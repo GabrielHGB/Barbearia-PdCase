@@ -18,9 +18,9 @@
     --fonte-titulo: "Oswald", sans-serif;
     --fonte-texto: "Inter", sans-serif;
     --largura-conteudo: 83.33%;
-    --raio-menor: 0.625rem;
+    --raio-menor: 0.6rem;
     --raio-card: 1rem;
-    --raio-maior: 1.125rem;
+    --raio-maior: 1.1rem;
 }
 
 html {
@@ -54,29 +54,6 @@ img {
 figure {
     margin: 0;
 }
-
-
-/* ==================================================
-   ACESSIBILIDADE
-================================================== */
-
-.sr-only {
-    width: 0.0625rem;
-    height: 0.0625rem;
-    padding: 0;
-    margin: -0.0625rem;
-    position: absolute;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-}
-
-a:focus-visible {
-    outline: 0.125rem solid var(--cor-dourada);
-    outline-offset: 0.25rem;
-}
-
 
 /* ==================================================
    CABEÇALHO
@@ -120,14 +97,14 @@ a:focus-visible {
     gap: 0.25rem;
     padding: 0.5rem 0.75rem;
     border-radius: 0.5rem;
-    font-size: 0.875rem;
+    font-size: 0.9rem;
     font-weight: 500;
     transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .nav-item:hover {
     color: var(--cor-dourada);
-    transform: translateY(-0.125rem);
+    transform: translateY(-0.12rem);
 }
 
 .nav-item.ativo {
@@ -136,7 +113,7 @@ a:focus-visible {
 
 .nav-indicador {
     width: 45%;
-    height: 0.125rem;
+    height: 0.12rem;
     display: block;
     background-color: transparent;
     border-radius: 1rem;
@@ -168,18 +145,18 @@ a:focus-visible {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0.875rem 1.5rem;
+    padding: 0.9rem 1.5rem;
     background-color: var(--cor-dourada);
     color: var(--cor-texto-escuro);
     border-radius: var(--raio-menor);
-    font-size: 0.8125rem;
+    font-size: 0.8rem;
     font-weight: 500;
     white-space: nowrap;
     transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
 }
 
 .botao:hover {
-    transform: translateY(-0.1875rem);
+    transform: translateY(-0.19rem);
     filter: brightness(1.08);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
 }
@@ -190,7 +167,7 @@ a:focus-visible {
 
 .botao-agendar {
     width: fit-content;
-    min-width: 14.375rem;
+    min-width: 14.4rem;
     align-self: flex-start;
 }
 
@@ -208,8 +185,19 @@ a:focus-visible {
 
 .conteudo {
     width: var(--largura-conteudo);
-    flex: 1;
-    padding-block: 2.5rem 3rem;
+    padding: 2rem;
+}
+
+.Titulo {
+    width: 0.06rem;
+    height: 0.06rem;
+    padding: 0;
+    margin: -0.06rem;
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
 
@@ -221,7 +209,7 @@ a:focus-visible {
     width: 100%;
     display: none;
     flex-direction: column;
-    gap: 1.625rem;
+    gap: 1.6rem;
 }
 
 .galeria-profissional:target {
@@ -247,12 +235,12 @@ a:focus-visible {
 }
 
 .titulo-acento {
-    width: 0.3125rem;
+    width: 0.3rem;
     height: 2.5rem;
     display: block;
     flex-shrink: 0;
     background-color: var(--cor-dourada);
-    border-radius: 0.125rem;
+    border-radius: 0.12rem;
 }
 
 .titulo-secao h2 {
@@ -285,7 +273,7 @@ a:focus-visible {
     object-fit: cover;
     object-position: center 20%;
     background-color: transparent;
-    border: 0.0625rem solid var(--cor-dourada);
+    border: 0.06rem solid var(--cor-dourada);
     border-radius: 50%;
 }
 
@@ -293,7 +281,7 @@ a:focus-visible {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.625rem;
+    gap: 0.6rem;
 }
 
 .nome-profissional {
@@ -305,7 +293,7 @@ a:focus-visible {
 
 .descricao-profissional {
     max-width: 30rem;
-    font-size: 0.9375rem;
+    font-size: 0.9rem;
     line-height: 1.5;
     color: var(--cor-texto-secundario);
 }
@@ -431,7 +419,7 @@ a:focus-visible {
    TABLET
 ================================================== */
 
-@media (max-width: 64rem) {
+@media (max-width: 1024px) {
 
     .cabecalho {
         padding-inline: 5%;
@@ -470,7 +458,7 @@ a:focus-visible {
    MOBILE
 ================================================== */
 
-@media (max-width: 48rem) {
+@media (max-width: 768px) {
 
     .cabecalho {
         width: 100%;
@@ -495,21 +483,21 @@ a:focus-visible {
         position: absolute;
         left: 1rem;
         font-family: var(--fonte-texto);
-        font-size: 1.375rem;
+        font-size: 1.4rem;
         font-weight: 500;
-        border-radius: 0.625rem;
+        border-radius: 0.6rem;
         transition: background-color 0.2s ease, transform 0.2s ease;
     }
 
     .cabecalho-mobile-voltar:hover {
         background-color: rgba(255, 255, 255, 0.05);
-        transform: translateX(-0.125rem);
+        transform: translateX(-0.12rem);
     }
 
     .cabecalho-mobile-titulo {
         display: block;
         font-family: var(--fonte-titulo);
-        font-size: 1.125rem;
+        font-size: 1.1rem;
         font-weight: 600;
         line-height: 1.5rem;
     }
@@ -529,12 +517,12 @@ a:focus-visible {
         width: 100%;
         min-height: 100%;
         flex: 1;
-        padding: 0.875rem 1.25rem 1.125rem;
+        padding: 0.9rem 1.25rem 1.1rem;
     }
 
     .galeria-profissional {
         min-height: 100%;
-        gap: 2.125rem;
+        gap: 2.1rem;
     }
 
 
@@ -549,7 +537,7 @@ a:focus-visible {
     }
 
     .titulo-secao {
-        height: 1.875rem;
+        height: 1.9rem;
         gap: 0.5rem;
     }
 
@@ -560,7 +548,7 @@ a:focus-visible {
 
     .titulo-secao h2 {
         font-size: 1.25rem;
-        line-height: 1.6875rem;
+        line-height: 1.7rem;
     }
 
 
@@ -571,10 +559,10 @@ a:focus-visible {
         min-height: 6.5rem;
         display: flex;
         align-items: center;
-        gap: 1.125rem;
-        padding: 0.75rem 0.875rem;
+        gap: 1.1rem;
+        padding: 0.75rem 0.9rem;
         background-color: transparent;
-        border-radius: 0.875rem;
+        border-radius: 0.9rem;
     }
 
     .profissional-foto {
@@ -584,26 +572,26 @@ a:focus-visible {
         object-fit: cover;
         object-position: center 20%;
         background-color: transparent;
-        border: 0.0625rem solid var(--cor-dourada);
+        border: 0.06rem solid var(--cor-dourada);
         border-radius: 50%;
     }
 
     .profissional-informacoes {
         flex: 1;
         min-width: 0;
-        gap: 0.125rem;
+        gap: 0.12rem;
     }
 
     .nome-profissional {
-        font-size: 1.125rem;
+        font-size: 1.1rem;
         line-height: 1.5rem;
     }
 
     .descricao-profissional {
         width: 100%;
         max-width: none;
-        font-size: 0.6875rem;
-        line-height: 0.9375rem;
+        font-size: 0.7rem;
+        line-height: 0.9rem;
         color: var(--cor-texto-secundario);
     }
 
@@ -611,22 +599,22 @@ a:focus-visible {
     /* Trabalhos */
 
     .trabalhos {
-        gap: 0.875rem;
+        gap: 0.9rem;
     }
 
     .grade-imagens {
         width: 100%;
         display: flex;
         flex-direction: column;
-        gap: 0.875rem;
+        gap: 0.9rem;
     }
 
     .imagem-destaque {
         width: 100%;
-        height: 14.375rem;
+        height: 14.4rem;
         overflow: hidden;
-        border-radius: 0.875rem;
-        border-bottom: 0.375rem solid var(--cor-dourada);
+        border-radius: 0.9rem;
+        border-bottom: 0.4rem solid var(--cor-dourada);
     }
 
     .imagem-destaque img {
@@ -646,8 +634,8 @@ a:focus-visible {
         width: 100%;
         height: 11rem;
         overflow: hidden;
-        border-radius: 0.875rem;
-        border-bottom: 0.375rem solid var(--cor-dourada);
+        border-radius: 0.9rem;
+        border-bottom: 0.4rem solid var(--cor-dourada);
     }
 
     .imagens-secundarias img {
@@ -675,7 +663,7 @@ a:focus-visible {
    MOBILE PEQUENO
 ================================================== */
 
-@media (max-width: 23rem) {
+@media (max-width: 368px) {
 
     .conteudo {
         padding-inline: 1rem;
@@ -708,15 +696,3 @@ a:focus-visible {
 /* ==================================================
    MOVIMENTO REDUZIDO
 ================================================== */
-
-@media (prefers-reduced-motion: reduce) {
-
-    *,
-    *::before,
-    *::after {
-        scroll-behavior: auto !important;
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
-}
